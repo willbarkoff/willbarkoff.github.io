@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{% include head.html%}
+	<link rel="stylesheet" href="css/home.css" crossorigin="anonymous">
+</head>
+
+<body class="hidden">
+	{% include nav.html %}
+	<div class="jumbotron jumbotron-fluid top tall">
+		<div class="container">
+			<div class="headerText">
+				<h1 class="display-4" id="greeting">Hi.</h1>
+				<p class="lead">I'm William Barkoff, a high schooler by day and a web developer by night. I'm indecisive at dusk.</p>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		{{ content }}
+		<h2>
+		<i class="fa fa-server"></i> Projects I've been working on:</h2>
+		<div class="container">
+			{% for project in site.projects %}
+				{% if project.featured %}
+					<div class="card mb-3">
+						{% if project.image %}
+						<img class="card-img-top" src="{{ project.image }}">
+						{% endif %}
+						<div class="card-body">
+							<h5 class="card-title">{{ project.name }}</h5>
+							{% if project.awards %}
+								<p class="small small-card"><i class="fa fa-trophy"></i> {{ project.awards }}</p>
+							{% endif %}
+							{% if project.collaborators %}
+							<p class="small small-card">
+								<i class="fa fa-user"></i> {{ project.collaborators }}
+							</p>
+							{% endif %}
+							{% if project.license %}
+							<p class="small small-card">
+								<i class="fa fa-bank"></i> {{ project.license }}
+							</p>
+							{% endif %}
+							{% if project.retired %}<p class="small small-card"><i class="fa fa-info"></i> Retired Project</a></p>{% endif %}
+							<p class="card-text">{{ project.description }}</p>
+							{% if project.website %}
+							<a href="{{ project.website }}" class="card-link">Website</a>
+							{% endif %}
+							{% if project.download %}
+							<a href="{{ project.download }}" class="card-link">Download</a>
+							{% endif %}
+							{% if project.source %}
+							<a href="{{ project.source }}" class="card-link">View Source</a>
+							{% endif %}
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">Featured Project</small>
+						</div>						  
+					</div>
+				{% endif %}
+			{% endfor %}
+			<div class="card-columns">
+				{% for project in site.projects %}
+				{% if project.featured != true%}
+				<div class="card">
+					{% if project.image %}
+						<img class="card-img-top" src="{{ project.image }}" alt="Screenshot of DaltonTab">
+					{% endif %}
+					<div class="card-body">
+						<h5 class="card-title">{{ project.name }}</h5>
+						{% if project.awards %}
+							<p class="small small-card"><i class="fa fa-trophy"></i> {{ project.awards }}</p>
+						{% endif %}
+						{% if project.collaborators %}
+						<p class="small small-card">
+							<i class="fa fa-user"></i> {{ project.collaborators }}
+						</p>
+						{% endif %}
+						{% if project.license %}
+						<p class="small small-card">
+							<i class="fa fa-bank"></i> {{ project.license }}
+						</p>
+                        {% endif %}
+                        {% if project.retired %}<p class="small small-card"><i class="fa fa-info"></i> Retired Project</a></p>{% endif %}
+						<p class="card-text">{{ project.description }}</p>
+						{% if project.website %}
+						<a href="{{ project.website }}" class="card-link">Website</a>
+						{% endif %}
+						{% if project.download %}
+						<a href="{{ project.download }}" class="card-link">Download</a>
+						{% endif %}
+						{% if project.source %}
+						<a href="{{ project.source }}" class="card-link">View Source</a>
+                        {% endif %}
+					</div>
+				</div>
+				{% endif %}
+				{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<br />
+	<h2>
+	<!-- jQuery first, then Tether, then Bootstrap JS. -->
+	{% include footer.html %}
+	{% include foot.html %}
+	<script src="js/index.js"></script>
+</body>
+
+</html>

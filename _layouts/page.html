@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{% include head.html%}
+</head>
+
+<body class="hidden">
+	<script>
+		$(document).ready(() => {
+			$("body").fadeIn();
+		})
+	</script>
+	{% include nav.html %}
+	<div class="jumbotron jumbotron-fluid top">
+		<div class="container">
+			<div class="headerText">
+				<h1 class="display-4" id="greeting">{{ page.title }}</h1>
+				<p class="lead" id="introduction">{{ page.subtitle }}</p>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		{{ content }}
+	</div>
+	<br />
+	<h2>
+		<!-- jQuery first, then Tether, then Bootstrap JS. -->
+		{% include footer.html %}
+		{% include foot.html %}
+</body>
+
+</html>

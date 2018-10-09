@@ -1,0 +1,14 @@
+title: William Barkoff
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name
+
+footer-social:
+  - icon: fa-twitter
+    url: https://twitter.com/nywillb
+  - icon: fa-github
+    url: https://blog.williambarkoff.com
+  - icon: fa-codepen
+    url: https://codepen.io/nywillb

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{% include head.html%}
+	<link rel="stylesheet" href="/css/page.css" crossorigin="anonymous">
+</head>
+
+<body class="hidden">
+	{% include nav.html %}
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<div class="headerText">
+				<h1 class="display-4" id="greeting">{{ page.name }}</h1>
+				<hr>
+			</div>
+			<p class="lead">{{ page.description }}</p>
+			{% if page.website %}
+			<a href="{{ project.website }}" class="btn btn-outline-success">Website</a>
+			{% endif %}
+			{% if page.download %}
+			<a href="{{ project.download }}" class="btn btn-outline-success">Download</a>
+			{% endif %}
+			{% if page.source %}
+			<a href="{{ project.source }}" class="btn btn-outline-success">View Source</a>
+			{% endif %}
+		</div>
+	</div>
+	<div class="container">
+		{{ content }}
+		<div>
+			{% if page.awards %}
+			<p class="lead"><i class="fa fa-trophy"></i> {{ page.awards }}</p>
+			{% endif %}
+			{% if page.collaborators %}
+			<p class="lead">
+				<i class="fa fa-user"></i> {{ page.collaborators }}
+			</p>
+			{% endif %}
+			{% if page.license %}
+			<p class="lead">
+				<i class="fa fa-bank"></i> {{ page.license }}
+			</p>
+			{% endif %}
+			{% if page.retired %}<p class="lead"><i class="fa fa-info"></i> Retired Project</a></p>{% endif %}
+		</div>
+	</div>
+	<br />
+	<h2>
+		<!-- jQuery first, then Tether, then Bootstrap JS. -->
+		{% include footer.html %}
+		{% include foot.html %}
+</body>
+
+</html>
