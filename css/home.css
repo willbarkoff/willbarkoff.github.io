@@ -1,0 +1,16 @@
+.top {
+	position: relative;
+}
+
+#particles {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: .5;
+	display: block;
+	z-index: 1;
+}
+
+.jumbotron-container {
+	z-index: 2
+}
