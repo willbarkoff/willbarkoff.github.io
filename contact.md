@@ -41,7 +41,7 @@ layout: page
                 </div>
                 <div class="form-group">
                     <button name="submit" type="submit" class="btn btn-primary">Send</button>
-                    <a href="mailto:william@barkoffusa.com" class="btn btn-outline-primary">Use default mail client</a>
+                    <a href="mailto:me@williambarkoff.com" class="btn btn-outline-primary">Use default mail client</a>
                     <button type="reset" class="btn btn-outline-danger">Clear</button>
                 </div>
             </form>
