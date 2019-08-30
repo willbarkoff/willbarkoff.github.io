@@ -10,7 +10,7 @@ layout: page
         <p>Hi! My preferred method of communication is via the form to the right, or via my email, <a href="mailto:me@williambarkoff.com">me@williambarkoff.com</a>. In addition, you can tweet me <a href="https://twitter.com/nywillb">@nywillb</a>.</p>
         <h4><i class="fa fa-exclamation-triangle"></i> Found an Issue?</h4>
         <p>Most of my projects are open source on Github. If you have found an issue, feel free to use the form on the left, or open an issue on the Github repository associated with that project.</p>
-        <h3><i class="fa fa-key"></i> Encrypt a message</h3>
+        <h4><i class="fa fa-key"></i> Encrypt a message</h4>
         <p>Feel free to encrypt or sign your message to me with my PGP key, available at <a href="https://keybase.io/nywillb">keybase</a>, or below.</p>
         <details>
             <summary>My PGP public key</summary>
