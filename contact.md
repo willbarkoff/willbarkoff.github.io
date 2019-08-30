@@ -13,9 +13,9 @@ layout: page
         <h3><i class="fa fa-key"></i> Encrypt a message</h3>
         <p>Feel free to encrypt or sign your message to me with my PGP key, available at <a href="https://keybase.io/nywillb">keybase</a>, or below.</p>
         <details>
-            <summary>My PGP publicKey</summary>
-            <pre>
-            -----BEGIN PGP PUBLIC KEY BLOCK-----
+            <summary>My PGP public key</summary>
+            <pre><code>
+-----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: Keybase OpenPGP v2.1.3
 Comment: https://keybase.io/crypto
 
@@ -104,7 +104,7 @@ y3TZ28vW4h/+j7vecEbZSyUbIARA5WWPwvLEAuS/FRrgjxh3qganox0rt4Bav2dN
 C+KvHkJQGVKs4YYPKe3KLR5G4u3w3C+h5Bz5AQ==
 =yRjr
 -----END PGP PUBLIC KEY BLOCK-----
-            </pre>
+            </code></pre>
         </details>
 
     </div>
