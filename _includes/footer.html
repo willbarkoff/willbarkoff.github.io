@@ -17,8 +17,26 @@
 					{% endfor %}
 				</p>
 			</div>
-			<div class="col-md-4 footer-ln-left"></div>
-			<div class="col-md-4 footer-ln-left"></div>
+			<div class="col-md-4 footer-ln-left">
+				<strong>Projects</strong>
+				<ul class="list-unstyled">
+					{% for project in site.footer-projects%}
+					<li>
+						<a href="{{ project.url }}">{{ project.name }}</a>
+					</li>
+					{% endfor %}
+					<li><a href="/">More...</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4 footer-ln-left">
+				<ul class="list-unstyled">
+					{% for link in site.footer-links%}
+					<li>
+						<a href="{{ link.url }}">{{ link.name }}</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>

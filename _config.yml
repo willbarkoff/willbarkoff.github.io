@@ -11,4 +11,24 @@ footer-social:
   - icon: fa-github
     url: https://github.com/nywillb
   - icon: fa-key
-    url: /key
+    url: /key.html
+
+footer-projects:
+  - name: MyHomeworkSpace
+    url: https://myhomework.space
+  - name: MyTiger
+    url: https://tiger.williambarkoff.com
+  - name: Dalton Tools
+    url: /daltontools
+
+footer-links:
+  - name: Website Source Code
+    url: https://github.com/nywillb/nywillb.github.io
+  - name: Contact Me
+    url: /contact.html
+  - name: PGP Key
+    url: /key.html
+  - name: Keybase
+    url: https://keybase.io/nywillb
+  - name: BarkoffUSA
+    url: https://barkoffusa.com
