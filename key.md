@@ -99,32 +99,6 @@ C+KvHkJQGVKs4YYPKe3KLR5G4u3w3C+h5Bz5AQ==
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
-Below is a message signed by myself, for testing purposes.
-
-```pgp
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA512
-
-Hi!
-
-This message is to confirm that this is my PGP key, and I own https://williambarkoff.com
-
-Thanks,
-William
------BEGIN PGP SIGNATURE-----
-Version: Keybase OpenPGP v2.1.3
-Comment: https://keybase.io/crypto
-
-wsBcBAABCgAGBQJdaJTRAAoJEAZJWWF2JwTH3qMH/1I9XgCH4BDhGIZM9hEamV+d
-86+6uvDDBGHFWhdtc3ArF0uxFB91jLnGUUY6EF8/7wIJi7Jy3sKJzou9NzJaCX9V
-RTfzrxJVCX8wbFeaAK8YnOToO3+kcInDrjbAI92rtKkUOYrsu3NTDZxQNI7QzNTZ
-szHLDn3ZavEgkDbWf+hOpgO9HEF5qoKn/GZS9BOBsJxoG/7Tnt4ycdHb2knV8iCj
-UNpPaXinExF17um+Dk6Pi+CSRBjfpbZxcIvuJWPipI/VNglNu40oHrMDJq9PKjIc
-diXE4wsC7kp+jn/rrvo6FXmnEMAzI2GZ+M3ZZ/OmD+pys8hHsTVsYR3I3ambUD0=
-=3AHZ
------END PGP SIGNATURE-----
-```
-
 If you want to verify that I own this site, you can use keybase to do so.
 
 <pre class="command-line language-bash" data-prompt="$" data-filter-output="(out)"><code class="language-bash">dig williambarkoff.com TXT | grep keybase
