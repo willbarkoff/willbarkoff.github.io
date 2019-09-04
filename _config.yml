@@ -10,3 +10,5 @@ footer-social:
     url: https://twitter.com/nywillb
   - icon: fa-github
     url: https://github.com/nywillb
+  - icon: fa-key
+    url: /key
