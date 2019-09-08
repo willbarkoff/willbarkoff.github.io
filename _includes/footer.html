@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="col-md-4">
 				<p class="lead footer-lead">
-					High schooler by day, web developer by night. I'm indecisive at dusk.
+					{{ site.tagline }}
 				</p>
 				<p class="footer-icons">
 					{% for link in site.footer-social %}
@@ -20,17 +20,18 @@
 			<div class="col-md-4 footer-ln-left">
 				<strong>Projects</strong>
 				<ul class="list-unstyled">
-					{% for project in site.footer-projects%}
+					{% for project in site.footer-projects %}
 					<li>
 						<a href="{{ project.url }}">{{ project.name }}</a>
 					</li>
 					{% endfor %}
-					<li><a href="/">More...</a></li>
+					<li><a href="/#projects">More...</a></li>
 				</ul>
 			</div>
 			<div class="col-md-4 footer-ln-left">
+				<strong>Resources</strong>
 				<ul class="list-unstyled">
-					{% for link in site.footer-links%}
+					{% for link in site.footer-resources %}
 					<li>
 						<a href="{{ link.url }}">{{ link.name }}</a>
 					</li>
@@ -38,5 +39,11 @@
 				</ul>
 			</div>
 		</div>
+		<hr />
+		<p>
+			<small class="footer-disclaimer">
+				{% github_edit_link "Suggest an edit to this page" %}
+			</small>
+		</p>
 	</div>
 </div>

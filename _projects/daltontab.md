@@ -6,5 +6,7 @@ description: A replacement for your new tab page that provides you with at-a-gla
 image: /img/dt.png
 download: https://chrome.google.com/webstore/detail/daltontab/ggfjkmflbbjndabmnngilkfpmdegbfkm
 source: https://github.com/MyHomeworkSpace/daltontab
+website: https://myhomework.space/daltontab.html
 layout: project
+technologies: ["Preact", "WebExtensions"]
 ---

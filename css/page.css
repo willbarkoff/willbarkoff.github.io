@@ -16,3 +16,70 @@
 .footer-ln-left {
 	border-left: 1px #ffffff40 solid;
 }
+
+.inline-list-item {
+	padding-right: 10px;
+}
+
+.footer-disclaimer,
+.footer-disclaimer > a {
+	color: white;
+	text-align: right;
+}
+
+[class|="technology"] {
+	color: #cccccc;
+}
+
+.technology-node-js {
+	color: #026e00;
+}
+
+.technology-react {
+	color: #00c8ff;
+}
+
+.technology-java {
+	color: #b07219;
+}
+
+.technology-html {
+	color: #e34c26;
+}
+
+.technology-css {
+	color: #563d7c;
+}
+
+.technology-js,
+.technology-javascript {
+	color: #f1e05a;
+}
+
+.technology-arduino {
+	color: #00979d;
+}
+
+.technology-dart {
+	color: #02589b;
+}
+
+.technology-flutter {
+	color: #5ec9f8;
+}
+
+.technology-react-native {
+	color: #00c8ff;
+}
+
+.technology-go {
+	color: #7fd5ea;
+}
+
+.technology-preact {
+	color: #673ab8;
+}
+
+.technology-webextensions {
+	color: #a6f099;
+}

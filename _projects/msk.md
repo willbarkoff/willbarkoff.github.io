@@ -7,6 +7,7 @@ description: A chatbot to improve communication between departments at Memorial 
 layout: project
 featured: true
 title: Charlie Chatbot
+technologies: ["Node.js", "React", "Java"]
 ---
 
 <div class="embed-responsive embed-responsive-16by9">

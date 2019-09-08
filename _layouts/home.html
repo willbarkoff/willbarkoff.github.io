@@ -13,14 +13,14 @@
 		<div class="container jumbotron-container">
 			<div class="headerText">
 				<h1 class="display-4" id="greeting">Hi.</h1>
-				<p class="lead">I'm William Barkoff, a high schooler by day and a web developer by night. I'm indecisive at dusk.</p>
+				<p class="lead">{{ site.tagline }}</p>
 			</div>
 		</div>
 	</div>
 	<div class="container">
 		{{ content }}
-		<h2>
-			<i class="fa fa-server"></i> Projects I've been working on:</h2>
+		<h2 id="projects">
+			<i class="fa fa-pencil-square"></i> Projects I've been working on:</h2>
 		<div class="container">
 			{% for project in site.projects %}
 			{% if project.featured %}
@@ -44,6 +44,13 @@
 					</p>
 					{% endif %}
 					{% if project.retired %}<p class="small small-card"><i class="fa fa-info"></i> Retired Project</a></p>{% endif %}
+					{% if project.technologies %}
+					<p>
+					{% for technology in project.technologies %}
+					<span class="inline-list-item"><i class="fa fa-circle technology-{{technology | slugify: "ascii"}}"></i> {{technology}} </span>
+					{% endfor %}
+					</p>
+					{% endif %}
 					<p class="card-text">{{ project.description }}</p>
 					{% if project.website %}
 					<a href="{{ project.website }}" class="card-link">Website</a>
@@ -84,6 +91,13 @@
 						</p>
 						{% endif %}
 						{% if project.retired %}<p class="small small-card"><i class="fa fa-info"></i> Retired Project</a></p>{% endif %}
+						{% if project.technologies %}
+						<p>
+						{% for technology in project.technologies %}
+						<span class="inline-list-item"><i class="fa fa-circle technology-{{technology | slugify: "ascii"}}"></i> {{technology}} </span>
+						{% endfor %}
+						</p>
+						{% endif %}
 						<p class="card-text">{{ project.description }}</p>
 						{% if project.website %}
 						<a href="{{ project.website }}" class="card-link">Website</a>

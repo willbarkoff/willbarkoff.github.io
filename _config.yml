@@ -1,4 +1,5 @@
 title: William Barkoff
+tagline: I'm William Barkoff, a high schooler by day and a developer by night. I'm indecisive at dusk.
 
 collections:
   projects:
@@ -18,10 +19,10 @@ footer-projects:
     url: https://myhomework.space
   - name: MyTiger
     url: https://tiger.williambarkoff.com
-  - name: Dalton Tools
-    url: /daltontools
+  - name: Honor with Code
+    url: https://honorwithcode.org
 
-footer-links:
+footer-resources:
   - name: Website Source Code
     url: https://github.com/nywillb/nywillb.github.io
   - name: Contact Me
@@ -30,5 +31,9 @@ footer-links:
     url: /key.html
   - name: Keybase
     url: https://keybase.io/nywillb
-  - name: BarkoffUSA
-    url: https://barkoffusa.com
+
+repository: "nywillb/nywillb.github.io"
+
+plugins:
+  - jemoji
+  - jekyll-mentions

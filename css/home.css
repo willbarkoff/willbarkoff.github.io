@@ -6,11 +6,11 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	opacity: .5;
+	opacity: 0.5;
 	display: block;
 	z-index: 1;
 }
 
 .jumbotron-container {
-	z-index: 2
+	z-index: 2;
 }

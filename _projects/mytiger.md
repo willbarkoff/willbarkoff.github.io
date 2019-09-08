@@ -6,4 +6,5 @@ description: A chatbot availible through text and Google Assistant to answer que
 website: https://tiger.williambarkoff.com
 source: https://github.com/nywillb/mytiger
 layout: project
+technologies: ["Node.js", "React Native"]
 ---
