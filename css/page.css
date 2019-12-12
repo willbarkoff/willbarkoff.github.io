@@ -31,7 +31,7 @@
 	color: #cccccc;
 }
 
-.technology-node-js {
+.technology-node\.js {
 	color: #026e00;
 }
 
@@ -86,4 +86,8 @@
 
 .technology-python {
 	color: #ffd242;
+}
+
+.technology-c\+\+ {
+	color: #f34b7d;
 }

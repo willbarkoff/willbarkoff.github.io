@@ -43,12 +43,15 @@
 						<i class="fa fa-bank"></i> {{ project.license }}
 					</p>
 					{% endif %}
-					{% if project.retired %}<p class="small small-card"><i class="fa fa-info"></i> Retired Project</a></p>{% endif %}
+					{% if project.retired %}<p class="small small-card"><i class="fa fa-info"></i> Retired Project</a>
+					</p>{% endif %}
 					{% if project.technologies %}
 					<p>
-					{% for technology in project.technologies %}
-					<span class="inline-list-item"><i class="fa fa-circle technology-{{technology | slugify: "ascii"}}"></i> {{technology}} </span>
-					{% endfor %}
+						{% for technology in project.technologies %}
+						<span class="inline-list-item"><i
+								class="fa fa-circle technology-{{technology | slugify: "ascii"}}"></i> {{technology}}
+						</span>
+						{% endfor %}
 					</p>
 					{% endif %}
 					<p class="card-text">{{ project.description }}</p>
@@ -90,12 +93,15 @@
 							<i class="fa fa-bank"></i> {{ project.license }}
 						</p>
 						{% endif %}
-						{% if project.retired %}<p class="small small-card"><i class="fa fa-info"></i> Retired Project</a></p>{% endif %}
+						{% if project.retired %}<p class="small small-card"><i class="fa fa-info"></i> Retired
+							Project</a></p>{% endif %}
 						{% if project.technologies %}
 						<p>
-						{% for technology in project.technologies %}
-						<span class="inline-list-item"><i class="fa fa-circle technology-{{technology | slugify: "ascii"}}"></i> {{technology}} </span>
-						{% endfor %}
+							{% for technology in project.technologies %}
+							<span class="inline-list-item"><i
+									class="fa fa-circle technology-{{technology | slugify: "pretty"}}"></i>
+								{{technology}} </span>
+							{% endfor %}
 						</p>
 						{% endif %}
 						<p class="card-text">{{ project.description }}</p>
@@ -117,11 +123,11 @@
 	</div>
 	</div>
 	<br />
-		<!-- jQuery first, then Tether, then Bootstrap JS. -->
-		{% include footer.html %}
-		{% include foot.html %}
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
-		<script src="js/index.js"></script>
+	<!-- jQuery first, then Tether, then Bootstrap JS. -->
+	{% include footer.html %}
+	{% include foot.html %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+	<script src="js/index.js"></script>
 </body>
 
 </html>
