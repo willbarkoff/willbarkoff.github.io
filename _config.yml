@@ -8,9 +8,9 @@ collections:
 
 footer-social:
   - icon: fa-twitter
-    url: https://twitter.com/nywillb
+    url: https://twitter.com/willbarkoff
   - icon: fa-github
-    url: https://github.com/nywillb
+    url: https://github.com/willbarkoff
   - icon: fa-key
     url: /key.html
 
@@ -24,7 +24,7 @@ footer-projects:
 
 footer-resources:
   - name: Website Source Code
-    url: https://github.com/nywillb/nywillb.github.io
+    url: https://github.com/willbarkoff/willbarkoff.github.io
   - name: Contact Me
     url: /contact.html
   - name: PGP Key
@@ -32,7 +32,7 @@ footer-resources:
   - name: Keybase
     url: https://keybase.io/nywillb
 
-repository: "nywillb/nywillb.github.io"
+repository: "willbarkoff/willbarkoff.github.io"
 
 plugins:
   - jemoji
