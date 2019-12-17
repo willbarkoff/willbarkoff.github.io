@@ -103,6 +103,6 @@ If you want to verify that I own this site, you can use keybase to do so.
 
 <pre class="command-line language-bash" data-prompt="$" data-filter-output="(out)"><code class="language-bash">dig williambarkoff.com TXT | grep keybase
 (out)
-(out)williambarkoff.com.	300	IN	TXT	"keybase-site-verification=o0UZqZ5KsFPe_UGfiAmiE00LGk-l9BjGiabMBg4ZWi0"</code></pre>
+(out)williambarkoff.com.     300     IN      TXT     "keybase-site-verification=o0UZqZ5KsFPe_UGfiAmiE00LGk-l9BjGiabMBg4ZWi0"</code></pre>
 
-<a href="https://keybase.io/nywillb/sigchain#a34519a99e4ab053defd419f8809a2134d0b1a4fa5f418c689a6cc060e195a2d0f">View in keybase</a>
+<a href="https://keybase.io/nywillb/sigchain#93e89183eaad33634f334d91615c290f8ef3fb8e90540fcf50caf9ffe81a118e0f">View in keybase</a>

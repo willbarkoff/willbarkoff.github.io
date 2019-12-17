@@ -7,7 +7,7 @@ layout: page
 <div class="row">
     <div class="col-md-6">
         <h3>Get in Touch</h3>
-        <p>Hi! My preferred method of communication is via the form to the right, or via my email, <a href="mailto:me@williambarkoff.com">me@williambarkoff.com</a>. In addition, you can tweet me <a href="https://twitter.com/willbarkoff">@willbarkoff</a>.</p>
+        <p>Hi! My preferred method of communication is via the form to the right, or via my email, <a href="mailto:me@willbarkoff.dev">me@willbarkoff.dev</a>. In addition, you can tweet me <a href="https://twitter.com/willbarkoff">@willbarkoff</a>.</p>
         <h4><i class="fa fa-exclamation-triangle"></i> Found an Issue?</h4>
         <p>Most of my projects are open source on Github. If you have found an issue, feel free to use the form on the left, or open an issue on the Github repository associated with that project.</p>
         <h4><i class="fa fa-key"></i> Encrypt a message</h4>
@@ -15,7 +15,7 @@ layout: page
     </div>
     <div class="col-md-6">
         <h3>Email Me</h3>
-        <form action="https://formspree.io/me@williambarkoff.com" method="POST">
+        <form action="https://formspree.io/me@willbarkoff.dev" method="POST">
             <form>
                 <div class="form-group">
                     <div class="row">
@@ -43,7 +43,7 @@ layout: page
                 </div>
                 <div class="form-group">
                     <button name="submit" type="submit" class="btn btn-primary">Send</button>
-                    <a href="mailto:me@williambarkoff.com" class="btn btn-outline-primary">Use default mail client</a>
+                    <a href="mailto:me@willbarkoff.dev" class="btn btn-outline-primary">Use default mail client</a>
                     <button type="reset" class="btn btn-outline-danger">Clear</button>
                 </div>
             </form>

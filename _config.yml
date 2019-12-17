@@ -17,8 +17,6 @@ footer-social:
 footer-projects:
   - name: MyHomeworkSpace
     url: https://myhomework.space
-  - name: MyTiger
-    url: https://tiger.williambarkoff.com
   - name: Honor with Code
     url: https://honorwithcode.org
 
