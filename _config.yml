@@ -1,5 +1,5 @@
-title: William Barkoff
-tagline: I'm William Barkoff, a high schooler by day and a developer by night. I'm indecisive at dusk.
+title: Will Barkoff
+tagline: I'm Will Barkoff, a high schooler by day and a developer by night. I'm indecisive at dusk.
 
 collections:
   projects:
@@ -9,10 +9,13 @@ collections:
 footer-social:
   - icon: fa-twitter
     url: https://twitter.com/willbarkoff
+    username: "@willbarkoff"
   - icon: fa-github
     url: https://github.com/willbarkoff
+    username: "@willbarkoff"
   - icon: fa-key
     url: /key.html
+    username: "PGP Key"
 
 footer-projects:
   - name: MyHomeworkSpace

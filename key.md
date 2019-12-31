@@ -101,8 +101,10 @@ C+KvHkJQGVKs4YYPKe3KLR5G4u3w3C+h5Bz5AQ==
 
 If you want to verify that I own this site, you can use keybase to do so.
 
-<pre class="command-line language-bash" data-prompt="$" data-filter-output="(out)"><code class="language-bash">dig williambarkoff.com TXT | grep keybase
-(out)
-(out)williambarkoff.com.     300     IN      TXT     "keybase-site-verification=o0UZqZ5KsFPe_UGfiAmiE00LGk-l9BjGiabMBg4ZWi0"</code></pre>
+```bash
+$ dig williambarkoff.com TXT | grep keybase
 
-<a href="https://keybase.io/nywillb/sigchain#93e89183eaad33634f334d91615c290f8ef3fb8e90540fcf50caf9ffe81a118e0f">View in keybase</a>
+williambarkoff.com.     300     IN      TXT     "keybase-site-verification=o0UZqZ5KsFPe_UGfiAmiE00LGk-l9BjGiabMBg4ZWi0"
+```
+
+[View in Keybase](https://keybase.io/nywillb/sigchain#93e89183eaad33634f334d91615c290f8ef3fb8e90540fcf50caf9ffe81a118e0f")

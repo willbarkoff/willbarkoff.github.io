@@ -2,132 +2,91 @@
 <html lang="en">
 
 <head>
-	{% include head.html%}
-	<link rel="stylesheet" href="css/home.css" crossorigin="anonymous">
+	{% include head.html %}
+	<link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
 	{% include nav.html %}
-	<div class="jumbotron jumbotron-fluid top tall text-light bg-primary text-light">
-		<canvas id="particles"></canvas>
-		<div class="container jumbotron-container">
-			<div class="headerText">
-				<h1 class="display-4" id="greeting">Hi.</h1>
-				<p class="lead">{{ site.tagline }}</p>
+	<section class="hero is-large is-top-hero">
+		<div class="hero-body">
+			<div class="container rellax">
+				<h1 class="title greeting has-text-white">
+					👋 Hi
+				</h1>
+				<h2 class="subtitle has-text-white">
+					{{site.tagline}}
+				</h2>
 			</div>
 		</div>
-	</div>
-	<div class="container">
-		{{ content }}
-		<h2 id="projects">
-			<i class="fa fa-pencil-square"></i> Projects I've been working on:</h2>
+	</section>
+	<div class="section is-what-ive-been-working-on" id="projects">
 		<div class="container">
-			{% for project in site.projects %}
-			{% if project.featured %}
-			<div class="card mb-3">
-				{% if project.image %}
-				<img class="card-img-top" src="{{ project.image }}">
-				{% endif %}
-				<div class="card-body">
-					<h5 class="card-title">{{ project.name }}</h5>
-					{% if project.awards %}
-					<p class="small small-card"><i class="fa fa-trophy"></i> {{ project.awards }}</p>
-					{% endif %}
-					{% if project.collaborators %}
-					<p class="small small-card">
-						<i class="fa fa-user"></i> {{ project.collaborators }}
-					</p>
-					{% endif %}
-					{% if project.license %}
-					<p class="small small-card">
-						<i class="fa fa-bank"></i> {{ project.license }}
-					</p>
-					{% endif %}
-					{% if project.retired %}<p class="small small-card"><i class="fa fa-info"></i> Retired Project</a>
-					</p>{% endif %}
-					{% if project.technologies %}
-					<p>
-						{% for technology in project.technologies %}
-						<span class="inline-list-item"><i
-								class="fa fa-circle technology-{{technology | slugify: "ascii"}}"></i> {{technology}}
-						</span>
-						{% endfor %}
-					</p>
-					{% endif %}
-					<p class="card-text">{{ project.description }}</p>
-					{% if project.website %}
-					<a href="{{ project.website }}" class="card-link">Website</a>
-					{% endif %}
-					{% if project.download %}
-					<a href="{{ project.download }}" class="card-link">Download</a>
-					{% endif %}
-					{% if project.source %}
-					<a href="{{ project.source }}" class="card-link">View Source</a>
-					{% endif %}
+			<h1 class="title">What I've been working on</h1>
+			{% assign rows = site.projects.size | divided_by: 3.0 | ceil %}
+			{% for i in (1..rows) %}
+			{% assign offset = forloop.index0 | times: 3 %}
+			<div class="tile is-ancestor">
+				{% for project in site.projects limit:3 offset:offset %}
+				<div class="tile is-parent">
+					<article class="tile is-child box project">
+						<div class="is-project-top">
+							<p class="title is-project-name">{{ project.name }}</p>
+							{% if project.awards %}
+							<p class="lead"><i class="fa fa-fw fa-trophy"></i> {{ project.awards }}</p>
+							{% endif %}
+							{% if project.collaborators %}
+							<p class="lead">
+								<i class="fa fa-fw fa-user"></i> {{ project.collaborators }}
+							</p>
+							{% endif %}
+							{% if project.license %}
+							<p class="lead">
+								<i class="fa fa-fw fa-bank"></i> {{ project.license }}
+							</p>
+							{% endif %}
+							{% if project.retired %}<p class="lead"><i class="fa fa-fw fa-info"></i> Retired Project</a>
+							</p>
+							{% endif %}
+							<p class="is-project-technologies">
+								{% for technology in project.technologies %}
+								<span class="inline-list-item"><i
+										class="fa fa-fw fa-circle technology-{{technology | slugify: "ascii"}}"></i>
+									{{technology}}
+								</span>
+								{% endfor %}
+							</p>
+							<div class="content">
+								<p>{{ project.description }}</p>
+							</div>
+						</div>
+						<div class="is-project-bottom">
+							{% if project.technologies %}
+							{% endif %}
+							{% if project.website %}
+							<a href="{{ project.website }}" class="button">Website</a>
+							{% endif %}
+							{% if project.download %}
+							<a href="{{ project.download }}" class="button">Download</a>
+							{% endif %}
+							{% if project.source %}
+							<a href="{{ project.source }}" class="button">View Source</a>
+							{% endif %}
+						</div>
+					</article>
 				</div>
-				<div class="card-footer">
-					<small class="text-muted">Featured Project</small>
-				</div>
-			</div>
-			{% endif %}
-			{% endfor %}
-			<div class="card-columns">
-				{% for project in site.projects %}
-				{% if project.featured != true%}
-				<div class="card">
-					{% if project.image %}
-					<img class="card-img-top" src="{{ project.image }}" alt="Screenshot of DaltonTab">
-					{% endif %}
-					<div class="card-body">
-						<h5 class="card-title">{{ project.name }}</h5>
-						{% if project.awards %}
-						<p class="small small-card"><i class="fa fa-trophy"></i> {{ project.awards }}</p>
-						{% endif %}
-						{% if project.collaborators %}
-						<p class="small small-card">
-							<i class="fa fa-user"></i> {{ project.collaborators }}
-						</p>
-						{% endif %}
-						{% if project.license %}
-						<p class="small small-card">
-							<i class="fa fa-bank"></i> {{ project.license }}
-						</p>
-						{% endif %}
-						{% if project.retired %}<p class="small small-card"><i class="fa fa-info"></i> Retired
-							Project</a></p>{% endif %}
-						{% if project.technologies %}
-						<p>
-							{% for technology in project.technologies %}
-							<span class="inline-list-item"><i
-									class="fa fa-circle technology-{{technology | slugify: "pretty"}}"></i>
-								{{technology}} </span>
-							{% endfor %}
-						</p>
-						{% endif %}
-						<p class="card-text">{{ project.description }}</p>
-						{% if project.website %}
-						<a href="{{ project.website }}" class="card-link">Website</a>
-						{% endif %}
-						{% if project.download %}
-						<a href="{{ project.download }}" class="card-link">Download</a>
-						{% endif %}
-						{% if project.source %}
-						<a href="{{ project.source }}" class="card-link">View Source</a>
-						{% endif %}
-					</div>
-				</div>
-				{% endif %}
 				{% endfor %}
 			</div>
+			{% endfor %}
 		</div>
 	</div>
-	</div>
-	<br />
-	<!-- jQuery first, then Tether, then Bootstrap JS. -->
 	{% include footer.html %}
 	{% include foot.html %}
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
-	<script src="js/index.js"></script>
+	<script src="js/home.js"></script>
+	<script>
+		// Accepts any class name
+		var rellax = new Rellax('.rellax');
+	</script>
 </body>
 
 </html>

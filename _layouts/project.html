@@ -2,59 +2,57 @@
 <html lang="en">
 
 <head>
-	{% include head.html%}
-	<link rel="stylesheet" href="/css/page.css" crossorigin="anonymous">
+    {% include head.html %}
 </head>
 
 <body>
-	{% include nav.html %}
-	<div class="jumbotron jumbotron-fluid">
-		<div class="container">
-			<div class="headerText">
-				<h1 class="display-4" id="greeting">{{ page.name }}</h1>
-				<hr>
-			</div>
-			<p class="lead">{{ page.description }}</p>
-			{% if page.website %}
-			<a href="{{ project.website }}" class="btn btn-outline-success">Website</a>
-			{% endif %}
-			{% if page.download %}
-			<a href="{{ project.download }}" class="btn btn-outline-success">Download</a>
-			{% endif %}
-			{% if page.source %}
-			<a href="{{ project.source }}" class="btn btn-outline-success">View Source</a>
-			{% endif %}
-		</div>
-	</div>
-	<div class="container">
-		<div>
-			{% if page.awards %}
-			<p class="lead"><i class="fa fa-trophy"></i> {{ page.awards }}</p>
-			{% endif %}
-			{% if page.collaborators %}
-			<p class="lead">
-				<i class="fa fa-user"></i> {{ page.collaborators }}
-			</p>
-			{% endif %}
-			{% if page.license %}
-			<p class="lead">
-				<i class="fa fa-bank"></i> {{ page.license }}
-			</p>
-			{% endif %}
-			{% if page.retired %}<p class="lead"><i class="fa fa-info"></i> Retired Project</a></p>{% endif %}
-			<p class="lead">
-			{% for technology in page.technologies %}
-			<span class="inline-list-item"><i class="fa fa-circle technology-{{technology | slugify: "ascii"}}"></i> {{technology}}</span>
-			{% endfor %}
-			</p>
-		</div>
-		<hr />
-		{{ content }}
-	</div>
-	<br />
-		<!-- jQuery first, then Tether, then Bootstrap JS. -->
-		{% include footer.html %}
-		{% include foot.html %}
+    {% include nav.html %}
+    <section class="hero is-top-hero">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title greeting has-text-white">
+                    {{page.name}}
+                </h1>
+                <h2 class="subtitle has-text-white">
+                    {{page.description}}
+                </h2>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            {% if page.awards %}
+            <p class="lead"><i class="fa fa-fw fa-trophy"></i> {{ page.awards }}</p>
+            {% endif %}
+            {% if page.collaborators %}
+            <p class="lead">
+                <i class="fa fa-fw fa-user"></i> {{ page.collaborators }}
+            </p>
+            {% endif %}
+            {% if page.license %}
+            <p class="lead">
+                <i class="fa fa-fw fa-bank"></i> {{ page.license }}
+            </p>
+            {% endif %}
+            {% if page.retired %}<p class="lead"><i class="fa fa-fw fa-info"></i> Retired Project</a></p>{% endif %}
+            <p class="lead">
+                {% for technology in page.technologies %}
+                <span class="inline-list-item"><i
+                        class="fa fa-fw fa-circle technology-{{technology | slugify: "ascii"}}"></i>
+                    {{technology}}</span>
+                {% endfor %}
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="content">
+                {{content}}
+            </div>
+        </div>
+    </section>
+    {% include footer.html %}
+    {% include foot.html %}
 </body>
 
 </html>

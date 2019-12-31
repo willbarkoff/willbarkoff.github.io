@@ -10,6 +10,6 @@ title: Charlie Chatbot
 technologies: ["Node.js", "React", "Python"]
 ---
 
-<div class="embed-responsive embed-responsive-16by9">
+<div class="embed">
 <iframe src="https://onedrive.live.com/embed?cid=B238BDEF0F0C3C2F&amp;resid=B238BDEF0F0C3C2F%212362&amp;authkey=AAYB_pn2sO3o8dM&amp;em=2&amp;wdAr=1.7777777777777777" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
 </div>
