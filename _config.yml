@@ -38,3 +38,4 @@ repository: "willbarkoff/willbarkoff.github.io"
 plugins:
   - jemoji
   - jekyll-mentions
+  - jekyll-redirect-from
