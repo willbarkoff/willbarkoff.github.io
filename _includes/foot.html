@@ -2,4 +2,9 @@
 	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/rellax@1.10.0/rellax.min.js"
 	integrity="sha256-jyHh7xruaFLUoKPPnsSwEvYrBnzJczScRNnuh4Ysblc=" crossorigin="anonymous"></script>
-<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.3/build/highlight.min.js"></script>
+
+{% if page.js %}
+{% for script in page.js %}
+<script src="{{script}}"></script>
+{% endfor %}
+{% endif %}
