@@ -75,3 +75,7 @@
 pre {
 	margin-bottom: 16px
 }
+
+.fa-ul {
+	list-style-type: none !important;
+}
