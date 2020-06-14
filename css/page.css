@@ -8,6 +8,19 @@
 	width: 100%
 }
 
+html, body, input, button {
+	font-family: 'Crimson Text', serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .title, .subtitle, .heading, .navbar-brand, strong, label, .label, .tag {
+	font-family: 'Nunito', sans-serif;
+	font-weight: 300;
+}
+
+/* .post-details {
+	color: #;
+} */
+
 [class|="technology"] {
 	color: #cccccc;
 }
@@ -72,10 +85,43 @@
 	color: #f34b7d;
 }
 
-pre {
+div.highlight {
 	margin-bottom: 16px
 }
 
 .fa-ul {
 	list-style-type: none !important;
+}
+
+a.footnote:before {
+	content: "[";
+}
+
+a.footnote:after {
+	content: "]";
+}
+
+.excerpt .footnote, .excerpt .footnotes {
+	display: none
+}
+
+.footnotes {
+	margin-top: 40px;
+	font-size: 1rem;
+}
+
+.container.post, .narrow {
+	max-width: 720px;
+}
+
+.container.post {
+	font-size: 1.2rem;
+}
+
+.feedLink {
+	color: white;
+}
+
+.content audio {
+	width: 100%;
 }

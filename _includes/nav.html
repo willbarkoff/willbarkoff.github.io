@@ -17,8 +17,8 @@
                 Home
             </a>
             {% for page in site.pages %}
-            {% if page.title != "Home" and page.hidden != true %}
-            <a class="navbar-item" href="{{ page.url }}">
+            {% if page.title != "Home" and page.title and page.hidden != true %}
+            <a class="navbar-item {% if page.url == current_url %}is-active{% endif %}" href="{{ page.url }}">
                 {{ page.title }}
             </a>
             {% endif %}

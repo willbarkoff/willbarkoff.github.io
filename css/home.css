@@ -30,9 +30,12 @@ nav {
 	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 } */
 
-.project {
+.project, .post {
 	display: flex;
 	flex-direction: column;
+}
+
+.project {
 	justify-content: space-between;
 }
 
@@ -40,10 +43,15 @@ nav {
 	padding-top: 30px;
 }
 
-.is-project-name {
+.is-project-name, .is-post-name {
 	margin-bottom: 5px !important;
 }
 
 .is-project-technologies {
 	margin-bottom: 5px;
+}
+
+.more-ramblings {
+	padding-bottom: 10px;
+	text-align: center;
 }

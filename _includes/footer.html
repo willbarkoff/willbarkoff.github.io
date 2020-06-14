@@ -14,7 +14,7 @@
                 {% endfor %}
             </div>
             <div class="column is-one-third">
-                <strong>Projects</strong>
+                <strong class="heading">Projects</strong>
                 <ul>
                     {% for project in site.footer-projects %}
                     <li>
@@ -25,7 +25,7 @@
                 </ul>
             </div>
             <div class="column is-one-third">
-                <strong>Resources</strong>
+                <strong class="heading">Resources</strong>
                 <ul>
                     {% for link in site.footer-resources %}
                     <li>
@@ -36,6 +36,19 @@
             </div>
         </div>
         <hr />
-        <small>{% github_edit_link "Suggest an edit to this page" %}</small>
+        <small>{% github_edit_link "Suggest an edit to this page" %}. Content on this site, with the exception of
+            posts, is licensed under the <a href="/licenses/cc-by.html">Creative Commons Attribution 4.0 International
+                License</a>. Posts are licensed differently, check in the footer of the post for license details. This
+            site is <a href="https://github.com/willbarkoff/willbarkoff.github.io">open source</a>, and any code is <a
+                href="/licenses/mit.html">MIT licensed</a>.</small>
+        <small class="notracking">Your browser has the <a href="https://allaboutdnt.com/">do not track</a> feature
+            enabled, so I won't track you with any analytics software. Normally, users are tracked just on this site (no
+            cross-site tracking) so I can see what pages they are visiting and better optimize those pages. No
+            personally-identifiable data is taken (no fingerprinting), and this data is never shared with any third
+            party.</small>
+        <small class="tracking">Users are tracked just on this site (no cross-site tracking) so I can see what pages
+            they are visiting and better optimize those pages. No personally-identifiable data is taken (no
+            fingerprinting), and this data is never shared with any third party. I don't track anyone who has enabled
+            the <a href="https://allaboutdnt.com/">do not track setting</a> on their browser</small>
     </div>
 </footer>
