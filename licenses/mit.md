@@ -1,7 +1,7 @@
 ---
 title: MIT License
 layout: page
-js: ["/js/mit.js"]
+js: ["/js/license.js"]
 hidden: true
 ---
 
