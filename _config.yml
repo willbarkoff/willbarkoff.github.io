@@ -30,12 +30,13 @@ footer-resources:
     url: /contact.html
   - name: PGP Key
     url: /key.html
-  - name: Keybase
-    url: https://keybase.io/nywillb
 
 repository: "willbarkoff/willbarkoff.github.io"
+
+permalink: /:categories/:year/:month/:day/:title
 
 plugins:
   - jemoji
   - jekyll-mentions
   - jekyll-redirect-from
+  - jekyll-feed
