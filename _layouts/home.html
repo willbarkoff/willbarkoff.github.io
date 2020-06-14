@@ -22,6 +22,21 @@
 	</section>
 	<div class="section is-what-ive-been-working-on" id="projects">
 		<div class="container">
+			<h1 class="title">What I've written recently</h1>
+			<div class="tile is-ancestor">
+				{% for post in site.posts limit:3 %}
+				<div class="tile is-parent">
+					<div class="tile is-child box post">
+						<p class="title is-post-name"><a href="{{post.url}}">{{post.title}}</a></p>
+						<div class="excerpt">{{post.excerpt}}</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+			<div class="more-ramblings">
+				<p class="is-size-4"><a href="/posts"><i class="far fa-comments"></i> More ramblings &raquo;</a>
+				</p>
+			</div>
 			<h1 class="title">What I've been working on</h1>
 			{% assign rows = site.projects.size | divided_by: 3.0 | ceil %}
 			{% for i in (1..rows) %}
@@ -45,7 +60,8 @@
 								<i class="fa fa-fw fa-bank"></i> {{ project.license }}
 							</p>
 							{% endif %}
-							{% if project.retired %}<p class="lead"><i class="fa fa-fw fa-info"></i> Retired Project</a>
+							{% if project.retired %}<p class="lead"><i class="fa fa-fw fa-info"></i> Retired
+								Project</a>
 							</p>
 							{% endif %}
 							<p class="is-project-technologies">

@@ -12,6 +12,9 @@
             <div class="container">
                 <h1 class="title greeting has-text-white">
                     {{page.title}}
+                    {% if page.feedLink %}
+                    <a href="/feed.xml" class="feedLink"><i class="fas fa-rss"></i></a>
+                    {% endif %}
                 </h1>
                 <h2 class="subtitle has-text-white">
                     {{page.subtitle}}
