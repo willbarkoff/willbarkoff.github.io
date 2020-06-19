@@ -8,7 +8,7 @@
 	width: 100%
 }
 
-html, body, input, button {
+html, body, input, textarea, button {
 	font-family: 'Crimson Text', serif;
 }
 
