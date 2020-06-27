@@ -6,6 +6,16 @@ collections:
     output: true
     permalink: /projects/:name
 
+nav-links:
+  - title: Home
+    url: /
+  - title: Contact
+    url: /contact.html
+  - title: Posts
+    url: /posts.html
+  - title: Resume
+    url: /img/resume-online.pdf
+
 footer-social:
   - icon: fa-twitter
     url: https://twitter.com/willbarkoff
