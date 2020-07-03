@@ -7,5 +7,5 @@ source: https://github.com/coursesplus/coursesplus
 description: A Google Chrome extension that adds features and improvements to the (now defunct) Courses website my school used.
 retired: true
 layout: project
-technologies: ["HTML", "CSS", "JS"]
+technologies: ["HTML", "CSS", "JavaScript"]
 ---

@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .title, .subtitle, .headin
 	color: #cccccc;
 }
 
-.technology-node\.js {
+.technology-node-js {
 	color: #026e00;
 }
 
@@ -81,8 +81,16 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .title, .subtitle, .headin
 	color: #ffd242;
 }
 
-.technology-c\+\+ {
+.technology-cpp {
 	color: #f34b7d;
+}
+
+.technology-cs {
+	color: #178600
+}
+
+.technology-typescript {
+	color: #2b7489
 }
 
 div.highlight {

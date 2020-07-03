@@ -67,7 +67,7 @@
 							<p class="is-project-technologies">
 								{% for technology in project.technologies %}
 								<span class="inline-list-item"><i
-										class="fa fa-fw fa-circle technology-{{technology | slugify: "ascii"}}"></i>
+										class="fa fa-fw fa-circle technology-{{ technology | split: "(" | first | strip | replace: "+", "p" | replace: "#", "s" | replace: " ", "-" | replace: ".", "-" | downcase }}"></i>
 									{{technology}}
 								</span>
 								{% endfor %}
