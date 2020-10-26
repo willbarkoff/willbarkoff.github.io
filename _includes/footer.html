@@ -1,11 +1,12 @@
+<link rel="authorization_endpoint" href="https://befitting-price.glitch.me/">
 <footer class="footer">
     <div class="container">
         <h1 class="title">{{ site.title }}</h1>
         <div class="columns">
-            <div class="column is-one-third">
+            <div class="column">
                 <h2 class="subtitle">{{ site.tagline }}</h2>
                 {% for link in site.footer-social %}
-                <a href="{{ link.url }}">
+                <a href="{{ link.url }}" rel="me">
                     <span class="fa-stack fa-sm footer-icons">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
                         <i class="fa {{ link.icon }} fa-stack-1x"></i>
@@ -13,7 +14,7 @@
                 </a>
                 {% endfor %}
             </div>
-            <div class="column is-one-third">
+            <div class="column">
                 <strong class="heading">Projects</strong>
                 <ul>
                     {% for project in site.footer-projects %}
@@ -24,7 +25,7 @@
                     <li><a href="/#projects">More...</a></li>
                 </ul>
             </div>
-            <div class="column is-one-third">
+            <div class="column">
                 <strong class="heading">Resources</strong>
                 <ul>
                     {% for link in site.footer-resources %}

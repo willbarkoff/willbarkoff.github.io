@@ -17,6 +17,9 @@ nav-links:
     url: /img/resume-online.pdf
 
 footer-social:
+  - icon: fa-envelope
+    url: mailto:william@barkoffusa.com
+    username: william@barkoffusa.com
   - icon: fa-twitter
     url: https://twitter.com/willbarkoff
     username: "@willbarkoff"
