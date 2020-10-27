@@ -4,6 +4,12 @@
 	background-blend-mode: exclusion, normal;
 }
 
+.is-top-hero .hero-body .container .columns .column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 .content>.embed {
 	width: 100%
 }
