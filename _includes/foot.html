@@ -1,7 +1,15 @@
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/rellax@1.10.0/rellax.min.js"
 	integrity="sha256-jyHh7xruaFLUoKPPnsSwEvYrBnzJczScRNnuh4Ysblc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/littlefoot/dist/littlefoot.js" type="application/javascript"></script>
+{%- capture littlefoot-template -%}
+{% include footnote-button.html %}
+{%- endcapture -%}
+<script type="application/javascript">
+	littlefoot.littlefoot({
+		buttonTemplate: '{{littlefoot-template | strip_newlines}}'
+	})
+</script>
 <script src="/js/page.js"></script>
 
 {% if page.js %}

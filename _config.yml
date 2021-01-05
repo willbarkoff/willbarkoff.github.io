@@ -44,6 +44,10 @@ footer-resources:
   - name: PGP Key
     url: /key.html
 
+markdown: kramdown
+kramdown:
+  math_engine: katex
+
 repository: "willbarkoff/willbarkoff.github.io"
 
 permalink: /:categories/:year/:month/:day/:title
