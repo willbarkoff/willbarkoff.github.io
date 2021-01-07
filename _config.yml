@@ -26,6 +26,9 @@ footer-social:
   - icon: fa-github
     url: https://github.com/willbarkoff
     username: "@willbarkoff"
+  - icon: fa-linkedin
+    url: https://linkedin.com/in/willbarkoff
+    username: "LinkedIn"
   - icon: fa-key
     url: /key.html
     username: "PGP Key"

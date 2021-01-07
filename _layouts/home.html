@@ -32,8 +32,6 @@
 								<li><i class="fab fa-twitter fa-fw"></i> <a
 										href="https://twitter.com/willbarkoff">@willbarkoff</a></li>
 								<li><i class="fas fa-key fa-fw"></i> <a href="/key.html">PGP Key</a></li>
-								<li><i class="fas fa-coffee fa-fw"></i> <a href="https://buymeacoff.ee/willbarkoff">Buy
-										me a coffee</a></li>
 							</ul>
 						</div>
 					</div>
@@ -88,7 +86,9 @@
 							<p class="is-project-technologies">
 								{% for technology in project.technologies %}
 								<span class="inline-list-item"><i
-										class="fa fa-fw fa-circle technology-{{ technology | split: "(" | first | strip | replace: "+", "p" | replace: "#", "s" | replace: " ", "-" | replace: ".", "-" | downcase }}"></i>
+										class="fa fa-fw fa-circle technology-{{ technology | split: " (" | first | strip
+										| replace: "+" , "p" | replace: "#" , "s" | replace: " " , "-" | replace: "."
+										, "-" | downcase }}"></i>
 									{{technology}}
 								</span>
 								{% endfor %}
