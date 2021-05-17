@@ -5,10 +5,10 @@ burger.addEventListener('click', function () {
     menu.classList.toggle('is-active');
 });
 
-if (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack) {
-    $(".notracking").show()
-    $(".tracking").hide()
-} else {
-    $(".tracking").show()
-    $(".notracking").hide()
-}
+document.querySelectorAll("script[type='math/tex; mode=display']").forEach(function (element) {
+    let text = element.innerHTML;
+    let newSpan = document.createElement("div");
+    newSpan.classList.add("equation")
+    newSpan.innerHTML = katex.renderToString("\\displaystyle " + text)
+    element.replaceWith(newSpan)
+})

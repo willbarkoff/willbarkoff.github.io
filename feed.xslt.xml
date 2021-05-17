@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsl:stylesheet version="1.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:a="http://www.w3.org/2005/Atom">
+
+	<xsl:output method="html" encoding="UTF-8"/>
+
+	<xsl:template match="text()"/>
+
+	<xsl:template match="a:feed">
+		<html>
+			<head>
+				<title>
+					<xsl:value-of select="a:title"/>
+				</title>
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" integrity="sha256-WLKGWSIJYerRN8tbNGtXWVYnUM5wMJTXD8eG4NtGcDM=" crossorigin="anonymous"/>
+				<link rel="stylesheet" href="/css/page.css"/>
+				<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&amp;family=Nunito:ital,wght@0,400;0,600;1,200&amp;display=swap" rel="stylesheet"/>
+			</head>
+			<body>
+				<div class="hero is-top-hero">
+					<div class="hero-body">
+						<div class="container">
+							<h1 class="title has-text-white">
+								<xsl:value-of select="a:title"/>
+							</h1>
+							<h2 class="subtitle has-text-white">
+								Atom feed
+							</h2>
+						</div>
+					</div>
+				</div>
+				<div class="section">
+					<div class="container">
+						<div class="notification is-warning is-light">
+							Ended up here by accident? <a href="/posts.html">Back to posts &#187;</a>
+						</div>
+						<div class="notification is-info is-light">
+							Hello. This is a machine-readable page that holds an <em>Atom feed</em>. You can use some sort of feed reader to get updates on this page.
+							Personally, I like <a href="https://thunderbird.net">Thunderbird</a>, and I know that a lot of other people like <a href="https://feedly.com">Feedly</a>.
+						</div>
+
+						<h1 class="title">Posts</h1>
+						<ul>
+							<xsl:apply-templates/>
+						</ul>
+					</div>
+				</div>
+			</body>
+		</html>
+	</xsl:template>
+
+	<xsl:template match="a:entry">
+		<li>
+			<xsl:element name="a">
+				<xsl:attribute name="href">
+					<xsl:value-of select="a:id"/>
+				</xsl:attribute>
+				<xsl:value-of select="a:title"/>
+			</xsl:element> 
+			– Written
+			<xsl:value-of select="substring(a:updated, 1, 10)"/>
+			–
+			<xsl:value-of select="a:summary"/>
+		</li>
+	</xsl:template>
+
+</xsl:stylesheet>
