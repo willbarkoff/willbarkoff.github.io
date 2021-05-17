@@ -207,3 +207,41 @@ a.footnote:after {
 	display: flex;
 	flex-direction: row;
 }
+
+.equation {
+	margin: 30px;
+	text-align: center;
+
+	.katex {
+		margin: auto;
+	}
+}
+
+.post-image {
+	width: initial;
+	margin: 0.5rem;
+
+	img {
+		width: initial;
+	}
+
+	figcaption {
+		font-style: italic;
+		margin-top: 0.5rem;
+		text-align: center;
+	}
+}
+
+.post-image-left {
+	float: left;
+	clear: left;
+}
+.post-image-center {
+	a {
+		text-align: center;
+	}
+}
+.post-image-right {
+	float: right;
+	clear: right;
+}
