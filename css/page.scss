@@ -49,6 +49,16 @@
 			height: 700px;
 		}
 	}
+
+	pre {
+		code {
+			font-size: 1em;
+		}
+	}
+
+	code {
+		font-size: 0.75rem;
+	}
 }
 
 html,
@@ -168,17 +178,23 @@ div.highlight {
 	list-style-type: none !important;
 }
 
-a.footnote:before {
-	content: "[";
-}
+.excerpt {
+	p {
+		display: inline;
+	}
 
-a.footnote:after {
-	content: "]";
-}
+	blockquote:before {
+		content: '"';
+	}
 
-.excerpt .footnote,
-.excerpt .footnotes {
-	display: none;
+	blockquote:after {
+		content: '"';
+	}
+
+	.footnote,
+	.footnotes {
+		display: none;
+	}
 }
 
 .footnotes {
