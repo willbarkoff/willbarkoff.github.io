@@ -14,7 +14,8 @@ nav {
 	z-index: 1;
 }
 
-.project, .post {
+.project,
+.post {
 	display: flex;
 	flex-direction: column;
 }
@@ -27,7 +28,8 @@ nav {
 	padding-top: 30px;
 }
 
-.is-project-name, .is-post-name {
+.is-project-name,
+.is-post-name {
 	margin-bottom: 5px !important;
 }
 

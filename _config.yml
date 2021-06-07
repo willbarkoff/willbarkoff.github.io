@@ -53,6 +53,9 @@ kramdown:
 
 repository: "willbarkoff/willbarkoff.github.io"
 
+sass:
+  style: compressed
+
 permalink: /:categories/:year/:month/:day/:title
 
 plugins:

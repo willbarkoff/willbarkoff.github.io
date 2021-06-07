@@ -1,31 +1,44 @@
 ---
 ---
 
+@import "./theme.sass";
+
 .is-top-hero {
 	color: white;
+	// background: linear-gradient(
+	// 		310deg,
+	// 		#00f0ff 0%,
+	// 		#00f0ff 20%,
+	// 		#0017e3 calc(20% + 1px),
+	// 		#0017e3 40%,
+	// 		#000f8f calc(40% + 1px),
+	// 		#000f8f 70%,
+	// 		#00073f calc(70% + 1px),
+	// 		#00073f 100%
+	// 	),
+	// 	linear-gradient(
+	// 		285deg,
+	// 		#ffb6b9 0%,
+	// 		#ffb6b9 35%,
+	// 		#fae3d9 calc(35% + 1px),
+	// 		#fae3d9 45%,
+	// 		#bbded6 calc(45% + 1px),
+	// 		#bbded6 65%,
+	// 		#61c0bf calc(65% + 1px),
+	// 		#61c0bf 100%
+	// 	);
+	// background-blend-mode: exclusion, normal;
 	background: linear-gradient(
-			310deg,
-			#00f0ff 0%,
-			#00f0ff 20%,
-			#0017e3 calc(20% + 1px),
-			#0017e3 40%,
-			#000f8f calc(40% + 1px),
-			#000f8f 70%,
-			#00073f calc(70% + 1px),
-			#00073f 100%
-		),
-		linear-gradient(
-			285deg,
-			#ffb6b9 0%,
-			#ffb6b9 35%,
-			#fae3d9 calc(35% + 1px),
-			#fae3d9 45%,
-			#bbded6 calc(45% + 1px),
-			#bbded6 65%,
-			#61c0bf calc(65% + 1px),
-			#61c0bf 100%
-		);
-	background-blend-mode: exclusion, normal;
+		55deg,
+		#0e2944 0%,
+		#0e2944 40%,
+		#102e4d calc(40% + 1px),
+		#102e4d 60%,
+		#123456 calc(60% + 1px),
+		#123456 70%,
+		#415c77 calc(70% + 1px),
+		#415c77 100%
+	);
 }
 
 .is-top-hero {
@@ -50,52 +63,16 @@
 		}
 	}
 
-	pre {
-		code {
-			font-size: 1em;
-		}
-	}
+	// pre {
+	// 	code {
+	// 		font-size: 1em;
+	// 	}
+	// }
 
-	code {
-		font-size: 0.75rem;
-	}
+	// code {
+	// 	font-size: 0.75rem;
+	// }
 }
-
-html,
-body,
-input,
-textarea,
-button {
-	font-family: "Crimson Text", serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-.title,
-.subtitle,
-.heading,
-.navbar-brand,
-strong,
-label,
-.label,
-.tag {
-	font-family: "Nunito", sans-serif;
-	font-weight: 300;
-}
-
-/* .post-details {
-	color: #;
-} */
 
 [class|="technology"] {
 	color: #cccccc;
