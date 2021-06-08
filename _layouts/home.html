@@ -10,7 +10,7 @@
 	{% include nav.html %}
 	<section class="hero is-medium is-top-hero">
 		<div class="hero-body">
-			<div class="container rellax">
+			<div class="container">
 				<div class="columns">
 					<div class="column is-two-thirds">
 						<h1 class="title greeting has-text-white">
@@ -67,28 +67,28 @@
 						<div class="is-project-top">
 							<p class="title is-project-name">{{ project.name }}</p>
 							{% if project.awards %}
-							<p class="lead"><i class="fa fa-fw fa-trophy"></i> {{ project.awards }}</p>
+							<p class="lead"><i class="fas fa-fw fa-trophy"></i> {{ project.awards }}</p>
 							{% endif %}
 							{% if project.collaborators %}
 							<p class="lead">
-								<i class="fa fa-fw fa-user"></i> {{ project.collaborators }}
+								<i class="fas fa-fw fa-user"></i> {{ project.collaborators }}
 							</p>
 							{% endif %}
 							{% if project.license %}
 							<p class="lead">
-								<i class="fa fa-fw fa-bank"></i> {{ project.license }}
+								<i class="fas fa-fw fa-university"></i> {{ project.license }}
 							</p>
 							{% endif %}
-							{% if project.retired %}<p class="lead"><i class="fa fa-fw fa-info"></i> Retired
+							{% if project.retired %}<p class="lead"><i class="fas fa-fw fa-info"></i> Retired
 								Project</a>
 							</p>
 							{% endif %}
 							<p class="is-project-technologies">
 								{% for technology in project.technologies %}
 								<span class="inline-list-item"><i
-										class="fa fa-fw fa-circle technology-{{ technology | split: " (" | first | strip
-										| replace: "+" , "p" | replace: "#" , "s" | replace: " " , "-" | replace: "."
-										, "-" | downcase }}"></i>
+										class="fas fa-fw fa-circle technology-{{ technology | split: " (" | first |
+										strip | replace: "+" , "p" | replace: "#" , "s" | replace: " " , "-" |
+										replace: "." , "-" | downcase }}"></i>
 									{{technology}}
 								</span>
 								{% endfor %}
@@ -120,10 +120,6 @@
 	{% include footer.html %}
 	{% include foot.html %}
 	<script src="js/home.js"></script>
-	<script>
-		// Accepts any class name
-		var rellax = new Rellax('.rellax');
-	</script>
 </body>
 
 </html>

@@ -17,19 +17,19 @@ nav-links:
     url: https://g.willbarkoff.dev/resume
 
 footer-social:
-  - icon: fa-envelope
+  - icon: fas fa-envelope
     url: mailto:william@barkoffusa.com
     username: william@barkoffusa.com
-  - icon: fa-twitter
+  - icon: fab fa-twitter
     url: https://twitter.com/willbarkoff
     username: "@willbarkoff"
-  - icon: fa-github
+  - icon: fab fa-github
     url: https://github.com/willbarkoff
     username: "@willbarkoff"
-  - icon: fa-linkedin
+  - icon: fab fa-linkedin
     url: https://linkedin.com/in/willbarkoff
     username: "LinkedIn"
-  - icon: fa-key
+  - icon: fas fa-key
     url: /key.html
     username: "PGP Key"
 

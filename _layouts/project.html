@@ -22,22 +22,22 @@
     <section class="section">
         <div class="container">
             {% if page.awards %}
-            <p class="lead"><i class="fa fa-fw fa-trophy"></i> {{ page.awards }}</p>
+            <p class="lead"><i class="fas fa-fw fa-trophy"></i> {{ page.awards }}</p>
             {% endif %}
             {% if page.collaborators %}
             <p class="lead">
-                <i class="fa fa-fw fa-user"></i> {{ page.collaborators }}
+                <i class="fas fa-fw fa-user"></i> {{ page.collaborators }}
             </p>
             {% endif %}
             {% if page.license %}
             <p class="lead">
-                <i class="fa fa-fw fa-bank"></i> {{ page.license }}
+                <i class="fas fa-fw fa-university"></i> {{ page.license }}
             </p>
             {% endif %}
-            {% if page.retired %}<p class="lead"><i class="fa fa-fw fa-info"></i> Retired Project</a></p>{% endif %}
+            {% if page.retired %}<p class="lead"><i class="fas fa-fw fa-info"></i> Retired Project</a></p>{% endif %}
             <p class="lead">
                 {% for technology in page.technologies %}
-                <span class="inline-list-item"><i class="fa fa-fw fa-circle technology-{{technology | slugify: "
+                <span class="inline-list-item"><i class="fas fa-fw fa-circle technology-{{technology | slugify: "
                         ascii"}}"></i>
                     {{technology}}</span>
                 {% endfor %}

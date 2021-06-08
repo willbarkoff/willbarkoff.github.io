@@ -24,34 +24,11 @@
             {% for link in site.footer-social %}
             <a class="navbar-item has-tooltip-bottom" data-tooltip="{{ link.username }}" href="{{ link.url }}">
                 <span class="fa-stack fa-sm footer-icons">
-                    <i class="fa fa-circle-thin fa-stack-2x"></i>
-                    <i class="fa {{ link.icon }} fa-stack-1x"></i>
+                    <i class="far fa-circle fa-stack-2x"></i>
+                    <i class="{{ link.icon }} fa-stack-1x"></i>
                 </span>
             </a>
             {% endfor %}
         </div>
     </div>
 </nav>
-
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <a class="navbar-brand" href="/">William Barkoff</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            {% assign current_url = page.url %}
-            <li class="nav-item {% if current_url == '/' %}active{% endif %}">
-                <a class="nav-link" href="/">Home</a>
-            </li>
-            {% for page in site.pages %}
-            {% if page.title != "Home" and page.hidden != true %}
-            <li class="nav-item {% if current_url == page.url %}active{% endif %}">
-                <a class="nav-link" href="{{ page.url }}">{{ page.title }}</a>
-            </li>
-            {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
-</nav> -->
