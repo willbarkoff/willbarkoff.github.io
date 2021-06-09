@@ -14,7 +14,7 @@ nav-links:
   - title: Posts
     url: /posts.html
   - title: Resume
-    url: https://g.willbarkoff.dev/resume
+    url: /resume.html
 
 footer-social:
   - icon: fas fa-envelope
