@@ -1,5 +1,5 @@
 {% assign current_url = page.url %}
-<nav class="navbar {% if current_url == '/' %} is-dark is-transparent {% endif %} is-spaced">
+<nav class="navbar {% if current_url == '/' or include.transparentnav %} is-dark is-transparent {% endif %} is-spaced">
     <div class="navbar-brand">
         <a href="/" class="navbar-item">
             <strong>Will Barkoff</strong>
