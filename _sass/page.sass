@@ -1,0 +1,119 @@
+
+$slants: linear-gradient(55deg, #0e2944 0%, #0e2944 40%, #102e4d calc(40% + 1px), #102e4d 60%, #123456 calc(60% + 1px), #123456 70%, #415c77 calc(70% + 1px), #415c77 100%)
+
+.is-top-hero
+	color: white
+	background: $slants
+
+.is-top-hero
+	.hero-body
+		.container
+			.columns
+				.column
+					display: flex
+					flex-direction: column
+					justify-content: center
+
+.content
+	.embed
+		iframe
+			width: 100%
+			height: 700px
+
+div.highlight
+	margin-bottom: 16px
+
+.fa-ul
+	list-style-type: none !important
+
+.excerpt
+	p
+		display: inline
+
+	blockquote:before
+		content: '"'
+
+	blockquote:after
+		content: '"'
+
+	.footnote,
+	.footnotes
+		display: none
+
+.footnotes
+	margin-top: 40px
+	font-size: 1rem
+
+.container.post,
+.narrow
+	max-width: 720px !important
+
+.container.post
+	font-size: 1.2rem
+
+.feedLink
+	color: white
+
+.content audio
+	width: 100%
+
+.navbar-end
+	display: flex
+	flex-direction: row
+
+.equation
+	margin: 30px
+	text-align: center
+
+	.katex
+		margin: auto
+
+.post-image
+	width: initial
+	margin: 0.5rem
+
+	img
+		width: 100%
+
+	figcaption
+		font-style: italic
+		margin-top: 0.5rem
+		text-align: center
+
+	&-left
+		float: left
+		clear: left
+
+	a
+		text-align: center
+
+	&-right
+		float: right
+		clear: right
+
+@mixin tech($language, $color)
+	.technology-#{$language}
+		color: $color
+
+@include tech("node-js", #026e00)
+@include tech("react", #00c8ff)
+@include tech("react-native", #00c8ff)
+@include tech("java", #b07219)
+@include tech("html", #e34c26)
+@include tech("css", #563d7c)
+@include tech("js", #f1e05a)
+@include tech("javascript", #f1e05a)
+@include tech("arduino", #00979d)
+@include tech("dart", #02589b)
+@include tech("flutter", #5ec9f8)
+@include tech("go", #7fd5ea)
+@include tech("preact", #673ab8)
+@include tech("webextensions", #a6f099)
+@include tech("python", #ffd242)
+@include tech("cpp", #f34b7d)
+@include tech("cs",  #178600)
+@include tech("ts", #2b7489)
+@include tech("typescript", #2b7489)
+
+[class|="technology"]
+	color: #cccccc

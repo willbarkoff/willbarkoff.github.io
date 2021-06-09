@@ -1,0 +1,34 @@
+// show the footnotes, even though littlefoot wants to hide them.
+
+.footnotes.footnote-print-only
+	display: unset !important
+
+	ol
+		display: block !important
+		counter-reset: ol-counter
+
+		li
+			margin-top: 1.15rem
+			list-style: none
+			counter-increment: ol-counter
+			display: list-item !important
+
+			.reversefootnote
+				display: none
+
+		li::before
+			content: counter(ol-counter)
+			background-color: #eef6fc
+			color: #1d72aa
+			border-radius: 290486px
+			align-items: center
+			display: inline-flex
+			font-size: 0.75rem
+			height: 2em
+			justify-content: center
+			line-height: 1.5
+			padding-left: 0.75em
+			padding-right: 0.75em
+			white-space: nowrap
+			font-family: "Nunito", sans-serif
+			font-weight: 300
