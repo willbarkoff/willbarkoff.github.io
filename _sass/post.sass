@@ -1,4 +1,7 @@
+
 // show the footnotes, even though littlefoot wants to hide them.
+
+$grey: hsl(0, 0%, 48%)
 
 .footnotes.footnote-print-only
 	display: unset !important
@@ -32,3 +35,53 @@
 			white-space: nowrap
 			font-family: "Nunito", sans-serif
 			font-weight: 300
+
+figure
+	.is-ballot
+		max-width: 300px
+		padding: 5px
+		border: 1px solid $grey
+
+		.is-sideways
+			transform: rotate(-90deg)
+			white-space: nowrap
+
+		.v-center
+			display: flex
+			justify-content: center
+			align-items: center
+
+.vote-bar
+	display: grid
+	grid-template-rows: repeat(1fr, 2)
+	margin-bottom: 1em
+
+	div
+		padding: 5px
+		text-align: center
+
+	.is-2
+		grid-column: span 2
+
+	.vote-desc:before
+		content: " "
+		display: block
+		height: 4px
+		width: 100%
+		margin-top: 5px
+		font-size: smaller
+
+	.has-border-primary-info-top:before
+		background: linear-gradient(to right, #123456, #3298dc)
+
+	.has-border-success-top:before
+		background: #48c774
+
+	.has-background-info-success
+		background: linear-gradient(to right, #123456, #3298dc)
+
+.vote-bar.is-25-30-45
+	grid-template-columns: 25fr 30fr 45fr
+
+.vote-bar.is-55-45
+	grid-template-columns: 55fr 45fr
