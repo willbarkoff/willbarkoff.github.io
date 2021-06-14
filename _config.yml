@@ -58,8 +58,17 @@ sass:
 
 permalink: /:categories/:year/:month/:day/:title
 
+twitter:
+  username: willbarkoff
+  card: summary
+
+author:
+  name: Will Barkoff
+  twitter: willbarkoff
+
 plugins:
   - jemoji
   - jekyll-mentions
   - jekyll-redirect-from
   - jekyll-feed
+  - jekyll-seo-tag

@@ -8,7 +8,7 @@ excerpt-seperator: <!--more-->
 
 New York City is about to have its [first ever ranked choice elections](https://en.wikipedia.org/wiki/2021_New_York_City_mayoral_election). This post is going to be a bit different compared to the ones I've previously written.
 
-Here we'll discuss three different voting methods. First, we'll talk about _plurality elections_[^1], the system used in previous New York City elections, and the most common electoral method. Then we'll talk about _instant-runoff voting_ (IRV henceforth)[^2], the new system being used by New York City in the primaries, and how most other ranked-choice elections are run. Finally, we'll talk about the _condorcet method_, a method that I will argue is better at electing a candidate than plurality and IRV.
+Here we'll discuss three different voting methods. First, we'll talk about _plurality elections_[^1], the system used in previous New York City elections, and the most common electoral method. Then we'll talk about _instant-runoff voting_ (IRV henceforth)[^2], the new system being used by New York City in the primaries, and how most other ranked-choice elections are run. Finally, we'll talk about the Condorcet method_, a method that I will argue is better at electing a candidate than plurality and IRV.
 
 
 [^1]: Also known as _first-past-the-post_ (FPTP), _single-choice voting_, _simple plurality_, _relative majority_, or _simple majority_, because humans are bad at naming things. 
@@ -60,7 +60,7 @@ Plurality voting is the system that you probably think of when you think of voti
 Now, plurality voting has a lot of advantages. It's fast, you can count votes super quickly, and get results quickly after votes have been cast. It's also very simple to understand, which means that people can vote easily. You simply mark the candidate who you like the best.
 
 There are; however, many downsides to plurality voting. First, voting for someone who may not be popular is a huge risk. Let's say candidates A and B are the front-runners in the race; however, your favorite candidate is candidate C, and your second favorite is candidate B. Candidate C has basically no chance of winning, regardless of whether you vote for them. By voting for candidate C, you're taking away a vote that would potentially mean more if you voted for candidate B.
-
+ 
 One other downside is "splitting the vote." This is what actually led to the party system that we have here in the United States and around the world. Let's say that candidates A and B have similar ideologies, and candidate C has a different ideology.
 
 <div class="notification is-primary is-light">
