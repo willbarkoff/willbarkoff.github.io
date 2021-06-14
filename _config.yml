@@ -66,6 +66,12 @@ author:
   name: Will Barkoff
   twitter: willbarkoff
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /img/bg.svg
+
 plugins:
   - jemoji
   - jekyll-mentions
