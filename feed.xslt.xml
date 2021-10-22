@@ -58,11 +58,11 @@
 					<xsl:value-of select="a:id"/>
 				</xsl:attribute>
 				<xsl:value-of select="a:title"/>
-			</xsl:element> 
-			– Written
-			<xsl:value-of select="substring(a:updated, 1, 10)"/>
-			–
-			<xsl:value-of select="a:summary"/>
+			</xsl:element>
+			–			<em>
+				written <xsl:value-of select="substring(a:updated, 1, 10)"/>
+			</em>
+
 		</li>
 	</xsl:template>
 
