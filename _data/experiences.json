@@ -1,0 +1,204 @@
+[
+    {
+        "title": "Cornell Rocketry Team",
+        "subtitle": "Software Lead",
+        "style": "bigfeature",
+        "image": "/img/projects/rocketry.jpg",
+        "skills": [
+            "Leadership",
+            "C++"
+        ],
+        "collaborators": [
+            {
+                "name": "Cornell Rocketry Team",
+                "url": "https://cornellrocketryteam.com"
+            }
+        ],
+        "description": "On the Cornell Rocketry Team, I lead a team of 7 software engineers to develop software for a high powered rocket. We work in low-level C and C++ and compete against over 160 other universites on a team of 45 students across 5 majors.",
+        "links": [
+            {
+                "text": "Website",
+                "url": "https://cornellrocketryteam.com"
+            }
+        ]
+    },
+    {
+        "title": "Cornell Hillel",
+        "subtitle": "President",
+        "style": "feature",
+        "skills": [
+            "Leadership"
+        ],
+        "collaborators": [
+            {
+                "name": "Cornell Hillel Student Executive Board",
+                "url": "https://hillel.cornell.edu"
+            }
+        ],
+        "description": "On the Cornell Rocketry Team, I lead a team of 7 software engineers to develop software for a high powered rocket. We work in low-level C and C++ and compete against over 160 other universites on a team of 45 students across 5 majors."
+    },
+    {
+        "title": "Samsung Electronics America",
+        "subtitle": "Software Engineering Intern",
+        "style": "feature",
+        "skills": [
+            "TypeScript",
+            "React",
+            "C#"
+        ],
+        "collaborators": [
+            {
+                "name": "Cornell Hillel Student Executive Board",
+                "url": "https://hillel.cornell.edu"
+            }
+        ],
+        "description": "On the Cornell Rocketry Team, I lead a team of 7 software engineers to develop software for a high powered rocket. We work in low-level C and C++ and compete against over 160 other universites on a team of 45 students across 5 majors."
+    },
+    {
+        "title": "MyHomeworkSpace",
+        "style": "standard",
+        "skills": [
+            "Preact",
+            "React",
+            "React Native",
+            "Go"
+        ],
+        "collaborators": [
+            {
+                "name": "MyHomeworkSpace Team",
+                "url": "http://myhomework.space/about.html"
+            }
+        ],
+        "description": "An online planner that lets you easily stay on top of your homework and tests. It synchronizes with the cloud, so you can access it anywhere you have an Internet connection.",
+        "links": [
+            {
+                "text": "Website",
+                "url": "https://myhomework.space"
+            },
+            {
+                "text": "View Source",
+                "url": "https://github.com/MyHomeworkSpace"
+            }
+        ]
+    },
+    {
+        "title": "Donorfide",
+        "style": "standard",
+        "skills": [
+            "Go",
+            "React",
+            "TypeScript"
+        ],
+        "collaborators": [
+            {
+                "name": "MyHomeworkSpace Team",
+                "url": "http://myhomework.space/about.html"
+            }
+        ],
+        "description": "A donation management software designed to be lightweight and powerful for small foundations.",
+        "links": [
+            {
+                "text": "Website",
+                "url": "https://donorfide.org"
+            },
+            {
+                "text": "View Source",
+                "url": "https://github.com/willbarkoff/donorfide"
+            }
+        ]
+    },
+    {
+        "title": "Pulse Wearables",
+        "style": "standard",
+        "skills": [
+            "Node.js",
+            "TypeScript",
+            "React",
+            "Python",
+            "C#"
+        ],
+        "collaborators": [
+            {
+                "name": "Richa Krishna and Anna Pertl",
+            }
+        ],
+        "description": "A wearable patch designed for people with heart conditions to help them monitor their physical activity.",
+    },
+    {
+        "title": "Charlie Chatbot (MSKCC)",
+        "style": "standard",
+        "skills": [
+            "Node.js",
+            "TypeScript",
+            "React",
+            "Python",
+            "C#"
+        ],
+        "awards": [
+            "Memorial Sloan Kettering DHI Summer Innovation Fellowship"
+        ],
+        "collaborators": [
+            {
+                "name": "Memorial Sloan Kettering Cancer Center",
+                "url": "https://mskcc.org"
+            }
+        ],
+        "description": "A chatbot to improve communication between departments at Memorial Sloan Kettering Cancer Center.",
+        "links": [
+            {
+                "text": "Impact presentation",
+                "url": "https://1drv.ms/p/s!Ai88DA_vvTiykjoqt2VzFcqRJRE1?e=M68sFE"
+            }
+        ]
+    },
+    {
+        "title": "Honor With Code",
+        "style": "standard",
+        "skills": [],
+        "awards": [
+            "Memorial Sloan Kettering DHI Summer Innovation Fellowship"
+        ],
+        "collaborators": [
+            {
+                "name": "Wounded Warrior Project",
+                "url": "https://mskcc.org"
+            },
+            {
+                "name": "Pluralsight (formerly Code School)",
+                "url": "https://www.pluralsight.com/codeschool"
+            },
+            {
+                "name": "Whiskey Bravo",
+                "url": "https://whiskeybravo.org"
+            }
+        ],
+        "description": "A program to donate Code School scholarships to injured veterans to help provide career training.",
+        "links": [
+            {
+                "text": "Website",
+                "url": "https://honorwithcode.org/"
+            }
+        ]
+    },
+    {
+        "title": "MyTiger",
+        "style": "standard",
+        "skills": [
+            "Node.js",
+            "React Native"
+        ],
+        "collaborators": [
+            {
+                "name": "Dalton School Student Government Technology Committee",
+                "url": "http://blogs.dalton.org/gov"
+            }
+        ],
+        "description": "A chatbot availible through text and Google Assistant to answer questions about your school day.",
+        "links": [
+            {
+                "text": "View source",
+                "url": "A chatbot availible through text and Google Assistant to answer questions about your school day."
+            }
+        ]
+    },
+]

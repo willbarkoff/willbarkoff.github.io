@@ -53,79 +53,71 @@
 	<div class="section is-what-ive-been-working-on" id="projects">
 		<div class="container">
 			<h1 class="title">What I've written recently</h1>
-			<div class="tile is-ancestor">
+			<div class="columns">
 				{% for post in site.posts limit:3 %}
-				<div class="tile is-parent">
-					<div class="tile is-child box post">
-						<p class="title is-post-name"><a href="{{post.url}}">{{post.title}}</a></p>
-						<div class="excerpt">{{post.excerpt}}</div>
+				<div class="column is-one-third">
+					<p class="title is-4 is-post-name mb-2"><a href="{{post.url}}">{{post.title}}</a></p>
+					<div class="excerpt">{{post.excerpt}}</div>
+				</div>
+				{% endfor %}
+			</div>
+			<div class="has-text-centered">
+				<p class="is-size-4"><a href="/posts"><i class="far fa-comments"></i> More posts &raquo;</a>
+				</p>
+			</div>
+			<h1 class="title">What I've been working on</h1>
+
+			<div class="columns is-multiline">
+				{% for experience in site.data.experiences %}
+				<div
+					class="column project {% if experience.style == 'bigfeature' %} is-full {% elsif experience.style == 'feature' %} is-half {% else %} is-one-third {% endif %}">
+					<div class="columns">
+						{% if experience.style == 'bigfeature' or experience.style == 'feature' and experience.image %}
+						<div class="column is-one-third">
+							<div class="image">
+								<img src="{{experience.image}}" class="">
+							</div>
+						</div>
+						{% endif %}
+						<div class="column m-0 auto">
+							<h2 class="title {% if experience.style == 'standard' %}is-5{% else %}is-4{% endif %}">
+								{{experience.title}}</h2>
+							<h2
+								class="subtitle mb-1 {% if experience.style == 'standard' %}is-5{% else %}is-4{% endif %}">
+								{{experience.subtitle}}</h2>
+							{% for award in experience.awards %}
+							<p><i class="fas fa-fw fa-trophy"></i> {{ award }}</p>
+							{% endfor %}
+							{% for collab in experience.collaborators %}
+							<p><i class="fas fa-fw fa-users"></i> Collaborated with {% if collab.url %}<a
+									href="{{collab.url}}">{%
+									endif%}{{collab.name}}{% if collab.url %}</a>{% endif%}</p>
+							{% endfor %}
+							<p class="is-project-technologies">
+								{% for skill in experience.skills %}
+								<span class="inline-list-item"><i
+										class="fas fa-fw fa-circle technology-{{ skill | split: " (" | first | strip |
+										replace: "+" , "p" | replace: "#" , "s" | replace: " " , "-" | replace: "."
+										, "-" | downcase }}"></i>
+									{{skill}}
+								</span>
+								{% endfor %}
+							</p>
+
+							<p class="content">
+								{{experience.description | markdownify | smartify}}
+							</p>
+
+							<div class="buttons mt-3">
+								{% for link in experience.links %}
+								<a href="{{link.url}}" class="button">{{link.text}}</a>
+								{% endfor %}
+							</div>
+						</div>
 					</div>
 				</div>
 				{% endfor %}
 			</div>
-			<div class="more-ramblings">
-				<p class="is-size-4"><a href="/posts"><i class="far fa-comments"></i> More ramblings &raquo;</a>
-				</p>
-			</div>
-			<h1 class="title">What I've been working on</h1>
-			{% assign rows = site.projects.size | divided_by: 3.0 | ceil %}
-			{% for i in (1..rows) %}
-			{% assign offset = forloop.index0 | times: 3 %}
-			<div class="tile is-ancestor">
-				{% for project in site.projects limit:3 offset:offset %}
-				<div class="tile is-parent">
-					<article class="tile is-child box project">
-						<div class="is-project-top">
-							<p class="title is-project-name">{{ project.name }}</p>
-							{% if project.awards %}
-							<p class="lead"><i class="fas fa-fw fa-trophy"></i> {{ project.awards }}</p>
-							{% endif %}
-							{% if project.collaborators %}
-							<p class="lead">
-								<i class="fas fa-fw fa-user"></i> {{ project.collaborators }}
-							</p>
-							{% endif %}
-							{% if project.license %}
-							<p class="lead">
-								<i class="fas fa-fw fa-university"></i> {{ project.license }}
-							</p>
-							{% endif %}
-							{% if project.retired %}<p class="lead"><i class="fas fa-fw fa-info"></i> Retired
-								Project</a>
-							</p>
-							{% endif %}
-							<p class="is-project-technologies">
-								{% for technology in project.technologies %}
-								<span class="inline-list-item"><i
-										class="fas fa-fw fa-circle technology-{{ technology | split: " (" | first |
-										strip | replace: "+" , "p" | replace: "#" , "s" | replace: " " , "-" |
-										replace: "." , "-" | downcase }}"></i>
-									{{technology}}
-								</span>
-								{% endfor %}
-							</p>
-							<div class="content">
-								<p>{{ project.description }}</p>
-							</div>
-						</div>
-						<div class="is-project-bottom">
-							{% if project.technologies %}
-							{% endif %}
-							{% if project.website %}
-							<a href="{{ project.website }}" class="button">Website</a>
-							{% endif %}
-							{% if project.download %}
-							<a href="{{ project.download }}" class="button">Download</a>
-							{% endif %}
-							{% if project.source %}
-							<a href="{{ project.source }}" class="button">View Source</a>
-							{% endif %}
-						</div>
-					</article>
-				</div>
-				{% endfor %}
-			</div>
-			{% endfor %}
 		</div>
 	</div>
 	{% include footer.html %}

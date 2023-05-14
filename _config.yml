@@ -1,5 +1,5 @@
 title: Will Barkoff
-tagline: I'm Will Barkoff, a student by day and a developer by night. I'm indecisive at dusk.
+tagline: I'm Will Barkoff, a Computer Science undergraduate at Cornell University, minoring in Electrical and Computer Engieering.
 
 collections:
   projects:
@@ -78,6 +78,3 @@ plugins:
   - jekyll-redirect-from
   - jekyll-feed
   - jekyll-seo-tag
-
-feed:
-  disable: true
