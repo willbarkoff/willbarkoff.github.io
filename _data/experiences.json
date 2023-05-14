@@ -35,7 +35,7 @@
                 "url": "https://hillel.cornell.edu"
             }
         ],
-        "description": "On the Cornell Rocketry Team, I lead a team of 7 software engineers to develop software for a high powered rocket. We work in low-level C and C++ and compete against over 160 other universites on a team of 45 students across 5 majors."
+        "description": "As president of Cornell Hillel, I serve on the Cornell Hillel board of trustees and Student Executive Board. On the student executive board, we organize large scale event"
     },
     {
         "title": "Samsung Electronics America",
@@ -46,13 +46,7 @@
             "React",
             "C#"
         ],
-        "collaborators": [
-            {
-                "name": "Cornell Hillel Student Executive Board",
-                "url": "https://hillel.cornell.edu"
-            }
-        ],
-        "description": "On the Cornell Rocketry Team, I lead a team of 7 software engineers to develop software for a high powered rocket. We work in low-level C and C++ and compete against over 160 other universites on a team of 45 students across 5 majors."
+        "description": "At Samsung, I worked on the New Concept Divison's Client Engineering team. I developed software for 2022 model year Samsung Smart TVs with C# and React.js. I worked on the front end related to Game Hub feature on 2022 model Smart TVs."
     },
     {
         "title": "MyHomeworkSpace",
