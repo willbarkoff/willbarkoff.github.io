@@ -2,15 +2,16 @@
 title: Posts
 subtitle: Things I've written on various topics
 layout: page
-feedLink: true
 narrow: true
+nocontent: true
 ---
 
 {% for post in site.posts %}
-<h3><a href="{{post.url}}">{{post.title}}</a></h3>
-<div class="post-details">
-	<i class="fas fa-calendar-alt fa-fw"></i>&nbsp;{{post.date | date_to_long_string: "ordinal", "US"}} | <i
-		class="fas fa-clock fa-fw"></i>&nbsp;{% include readtime.html content=post.content %}
+<div>
+	<p class="heading">
+		{{post.date | date_to_long_string: "ordinal", "US" }} &mdash;
+		{% include readtime.html content=post.content %} read
+	</p>
+	<h3 class="title is-4 mb-5"><a href="{{post.url}}">{{post.title}}</a></h3>
 </div>
-<div class="excerpt">{{post.excerpt}}</div>
 {% endfor %}
