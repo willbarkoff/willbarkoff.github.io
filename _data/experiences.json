@@ -1,7 +1,7 @@
 [
     {
         "title": "Cornell Rocketry Team",
-        "subtitle": "Software Lead",
+        "subtitle": "Team Lead",
         "style": "bigfeature",
         "image": "/img/projects/rocketry.jpg",
         "skills": [
@@ -14,12 +14,16 @@
                 "url": "https://cornellrocketryteam.com"
             }
         ],
-        "description": "On the Cornell Rocketry Team, I lead a team of 7 software engineers to develop software for a high powered rocket. We work in low-level C and C++ and compete against over 160 other universites on a team of 45 students across 5 majors.",
+        "description": "On the Cornell Rocketry Team, I lead a co-team of 58 engineers to design and build a high powered rocket to compete in the Spaceport America Cup, the worlds largest intercollegiate rocket engineering competition. Previously, I was the software lead, running a team of 7 software engineers developing low-level C and C++ for the rocket.",
         "links": [
             {
                 "text": "Website",
                 "url": "https://cornellrocketryteam.com"
             }
+        ],
+        "awards": [
+            "2nd Place, 2023 Spaceport America Cup",
+            "1st Place, 10k SRAD Division, 2023 Spaceport America Cup"
         ]
     },
     {
@@ -35,7 +39,7 @@
                 "url": "https://hillel.cornell.edu"
             }
         ],
-        "description": "As president of Cornell Hillel, I serve on the Cornell Hillel board of trustees and Student Executive Board. On the student executive board, we organize large scale event"
+        "description": "As president of Cornell Hillel, I serve on the Cornell Hillel board of trustees and Student Executive Board. On the student executive board, we organize large scale events for Cornell's ~3000 Jewish students."
     },
     {
         "title": "Samsung Electronics America",
