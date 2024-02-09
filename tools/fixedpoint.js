@@ -87,8 +87,11 @@ const update = () => {
         return BigInt.asIntN(bitsBefore + bitsAfter + 1, fix);
     }
 
-    const maxValue = fixToFloat(Math.pow(2, bitsBefore + bitsAfter) - 1)
-    const minValue = fixToFloat(signed ? Math.pow(2, bitsBefore + bitsAfter): 0);
+    const maxValue = fixToFloat(Math.pow(2, bitsBefore + bitsAfter - (signed ? 1 : 0)) - 1)
+    const minValue = fixToFloat(signed ? -1 * Math.pow(2, bitsBefore + bitsAfter - 1): 0);
+
+    console.log(bitsBefore, bitsAfter, signed)
+
     const resolution = fixToFloat(1);
     const totalBits = bitsBefore + bitsAfter + (signed ? 1 : 0)
 
@@ -105,7 +108,7 @@ const update = () => {
         addVisulizationBox(visualizationRow1, signBox);
     }
 
-    for (let i = bitsBefore - 1; i >= 0; i--) {
+    for (let i = bitsBefore - (signed ? 2 : 1); i >= 0; i--) {
         addVisulizationBox(visualizationRow1, generatePowerOfTwoHTML(i), i == 0);
     }
 
@@ -127,7 +130,7 @@ const update = () => {
     octalFieldVerilog.value = totalBits + "'o" + unsignFix(number).toString(8);
     binaryFieldVerilog.value = totalBits + "'b" + unsignFix(number).toString(2);
 
-    for (let i = bitsBefore + bitsAfter - (signed ? 0 : 1); i >= 0; i--) {
+    for (let i = bitsBefore + bitsAfter - 1; i >= 0; i--) {
         let el = document.createElement("span");
         el.textContent = getBitValue(number, i)
         addVisulizationBox(visualizationRow2, el, i == bitsAfter)
