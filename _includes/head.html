@@ -6,7 +6,6 @@
 <!-- Scripts -->
 <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
 
-
 <!-- Styles -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wikiki/bulma-tooltip@3.0.2/dist/css/bulma-tooltip.min.css"
 	integrity="sha256-XHnRKkCzUyquwVn6oLhf09UA4ZJGd2G3HgvaD9BPMHY=" crossorigin="anonymous">
@@ -24,6 +23,9 @@
 
 <!-- Meta -->
 <meta name="theme-color" content="#123456" />
+{% if page.noindex %}
+<meta name="robots" content="noindex, nofollow">
+{% endif %}
 {% seo title=false %}
 
 <!-- Feed -->
