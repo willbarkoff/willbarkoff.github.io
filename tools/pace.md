@@ -6,11 +6,32 @@ js: ["https://unpkg.com/imask@7.3.0/dist/imask.js", "pace.js"]
 
 A million of these calculators exist, but I couldn't find a _fast_ one that doesn't require button presses and has all the distances that I want. Type in any box, and the rest will populate.
 
-<div class="field">
-	<label class="label">Pace</label>
-		<div class="control">
-		<input class="input" type="text" class="input pace-input" placeholder="9'15&quot;">
-	</div>
+
+<div class="columns">
+    <div class="field column is-one-quarter">
+        <label class="label">Pace (mile)</label>
+            <div class="control">
+            <input type="text" class="input pace-input" placeholder="9'15&quot;">
+        </div>
+    </div>
+    <div class="field column is-one-quarter">
+        <label class="label">Pace (km)</label>
+            <div class="control">
+            <input type="text" class="input pace-km-input" placeholder="9'15&quot;">
+        </div>
+    </div>
+    <div class="field column is-one-quarter">
+        <label class="label">Speed (mph)</label>
+            <div class="control">
+            <input type="text" class="input mph-input" placeholder="5mph">
+        </div>
+    </div>
+    <div class="field column is-one-quarter">
+        <label class="label">Speed (kmh)</label>
+            <div class="control">
+            <input type="text" class="input kmh-input" placeholder="5kmh">
+        </div>
+    </div>
 </div>
 
 
