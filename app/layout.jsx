@@ -7,8 +7,11 @@ export const metadata = {
     template: `%s | ${site.title}`
   },
   description: site.tagline,
-  themeColor: '#123456'
 };
+
+export const viewport = {
+  themeColor: site.accent
+}
 
 export default function RootLayout({ children }) {
   return (

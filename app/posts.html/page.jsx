@@ -15,7 +15,6 @@ export default async function PostsHtmlPage() {
       currentPath="/posts.html"
       title="Posts"
       subtitle="Things I&apos;ve written on various topics"
-      narrow
     >
       <div className="posts-index">
         {posts.map((post) => (

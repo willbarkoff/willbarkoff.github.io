@@ -37,13 +37,6 @@ img {
   margin: 0 auto;
 }
 
-.container.narrow,
-.post-content,
-.post-meta-footer {
-  width: min(760px, calc(100% - 2rem));
-  margin: 0 auto;
-}
-
 .site-nav {
   border-bottom: 1px solid var(--line);
   background: white;
@@ -462,6 +455,12 @@ img {
 
 .has-background-primary-info {
   background: linear-gradient(to right, #123456, #3298dc);
+}
+
+.is-ballot-container {
+  border: 1px solid #333;
+  padding: 8px;
+  background: #eee;
 }
 
 @media (max-width: 800px) {

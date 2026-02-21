@@ -8,7 +8,7 @@ excerpt-seperator: <!--more-->
 
 New York City is about to have its [first ever ranked choice elections](https://en.wikipedia.org/wiki/2021_New_York_City_mayoral_election). This post is going to be a bit different compared to the ones I've previously written.
 
-Here we'll discuss three different voting methods. First, we'll talk about _plurality elections_[^1], the system used in previous New York City elections, and the most common electoral method. Then we'll talk about _instant-runoff voting_ (IRV henceforth)[^2], the new system being used by New York City in the primaries, and how most other ranked-choice elections are run. Finally, we'll talk about the Condorcet method_, a method that I will argue is better at electing a candidate than plurality and IRV.
+Here we'll discuss three different voting methods. First, we'll talk about _plurality elections_[^1], the system used in previous New York City elections, and the most common electoral method. Then we'll talk about _instant-runoff voting_ (IRV henceforth)[^2], the new system being used by New York City in the primaries, and how most other ranked-choice elections are run. Finally, we'll talk about the _Condorcet method_, a method that I will argue is better at electing a candidate than plurality and IRV.
 
 
 [^1]: Also known as _first-past-the-post_ (FPTP), _single-choice voting_, _simple plurality_, _relative majority_, or _simple majority_, because humans are bad at naming things. 
@@ -20,7 +20,7 @@ Let's dive in!
 
 Plurality voting is the system that you probably think of when you think of voting. The idea is very simple. Everybody casts a vote for one person, then the votes are tallied, and whichever candidate has the most votes wins.
 
-<figure class="post-image post-image-right">
+<figure class="post-image post-image-right is-ballot-container">
 	<div class="content is-small is-ballot">
 		<p>Mark the oval next to the candidate who you would like to vote for. <strong>Vote only once.</strong></p>
 		<table class="is-bordered">
@@ -98,7 +98,7 @@ With systems like this, people end up writing in candidates and throwing away th
 
 Instant Runoff Voting (IRV) is one of the simplest forms of ranked-choice voting, and it's what's being used in the upcoming NYC primaries. It aims to remedy some issues with plurality voting, but it certainly isn't perfect.
 
-<figure class="post-image post-image-left">
+<figure class="post-image post-image-left is-ballot-container">
 	<div class="content is-small is-ballot">
 		<p>Rank up to five candidates in order of preference. Ranking a second, third, fourth, or fifth choice does not affect your first choice candidate, or any of the candidates ranked above them. You do not need to rank all candidates for your vote to count. <strong>Vote only once per row and only once per column.</strong></p>
 		<table class="is-bordered">
@@ -281,7 +281,7 @@ Bob Kiss won the election by about 300 votes in the last round of IRV, but, the 
 ## Condorcet Voting
 Looking back at that 2009 Burlington mayoral election, it seems like a lot of people would have preferred Andy Montroll. He had a strong 1st choice showing (ranking 3rd overall in terms of 1st choice), and an even stronger 2nd choice showing.
 
-<figure class="post-image post-image-right">
+<figure class="post-image post-image-left is-ballot-container">
 	<div class="content is-small is-ballot">
 		<p>Rank five candidates in order of preference. You may give multiple candidates the same rank, but not ranking a candidate is equivalent to ranking them last. <strong>Vote only once per row.</strong></p>
 		<table class="is-bordered">
@@ -353,19 +353,19 @@ There are several ways of picking a winner when a Condorcet winner does not exis
 
 [^7]: This is called the _Condorcet paradox_, also known as _the paradox of voting_ or _the voting paradox_ (not to be confused with [Arrow's paradox](https://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem), something totally different). Essentially, in an election with candidates A, B, and C, (or any number of candidates &ge;3), the majority of voters can prefer candidate A over candidate B, candidate B over candidate C, and candidate C over candidate A, even if that cannot be said of any individual voter.
 
-{% include post-image.html 
-	url="/img/2021-06-13-ranked-choice/condorcet.png"
-	caption="Marquis of Condorcet"
-	max_width="200px"
-	side="left"
-	attribution="Artist unknown"
-%}
-
 The Condorcet system was named after Marie Jean Antoine Nicolas de Caritat, Marquis of Condorcet, who did a bunch of voting-related research in the 18th century. It is; however, important to note, that the first known Condorcet system was devised by [Ramon Llull](https://en.wikipedia.org/wiki/Ramon_Llull).
 
 He was a decently cool guy, he promoted ideas like gender equality, and was one of the first enlightenment thinkers to propose women's suffrage in the new republic.
 
 To quote one of his writings:
+
+{% include post-image.html 
+	url="/img/2021-06-13-ranked-choice/condorcet.png"
+	caption="Marquis of Condorcet"
+	max_width="200px"
+	side="right"
+	attribution="Artist unknown"
+%}
 
 > The rights of men stem exclusively from the fact that they are sentient beings, capable of acquiring moral ideas and of reasoning upon them. Since women have the same qualities, they necessarily also have the same rights. Either no member of the human race has any true rights, or else they all have the same ones; and anyone who votes against the rights of another, whatever his religion, colour or sex, automatically forfeits his own.[^8]
 
@@ -376,12 +376,12 @@ So, he seemed to have some pretty cool (and unpopular at the time) social belief
 They submit the following ballots:
 
 | # Ballots | 1st choice | 2nd choice | 3rd choice | 4th choice |
-|-|-|-|-|-|
-| 17 | Chocolate | Vanilla | Coffee | Strawberry |
-| 11 | Vanilla | Coffee | Strawberry | Chocolate |
-| 8 | Strawberry | Coffee | Chocolate | Vanilla |
-| 5 | Chocolate | Coffee | Strawberry | Vanilla |
-| 2 | Strawberry | Chocolate | Vanilla | Coffee |
+| ----------|------------|------------|------------|------------|
+| 17        | Chocolate  | Vanilla    | Coffee     | Strawberry |
+| 11        | Vanilla    | Coffee     | Strawberry | Chocolate  |
+| 8         | Strawberry | Coffee     | Chocolate  | Vanilla    |
+| 5         | Chocolate  | Coffee     | Strawberry | Vanilla    |
+| 2         | Strawberry | Chocolate  | Vanilla    | Coffee     |
 
 (By the way, anyone who didn't rank strawberry last is objectively incorrect)
 
@@ -391,10 +391,10 @@ Let's run it!
 
 Winners are marked in bold, and the number of votes for each is marked in parenthesis.
 
-| _none_ | **chocolate** (32) / vanilla (11) | **chocolate** (24) / coffee (19) | **chocolate** (22) / strawberry (21) |
-| vanilla (11) / **chocolate** (32) | _none_ | **vanilla** (30) / coffee (13) | **vanilla** (28) / strawberry (15) |
-| coffee (19) / **chocolate** (24) | coffee (13) / **vanilla** (30) | _none_ | **coffee** (33) / strawberry (10) |
-| strawberry (21) / **chocolate** (22) | strawberry (15) / **vanilla** (28) | strawberry (10) / **coffee** (33) | _none_ |
+| _none_                               | **chocolate** (32) / vanilla (11)  | **chocolate** (24) / coffee (19)  |  **chocolate** (22) / strawberry (21) |
+| vanilla (11) / **chocolate** (32)    | _none_                             | **vanilla** (30) / coffee (13)    | **vanilla** (28) / strawberry (15)    |
+| coffee (19) / **chocolate** (24)     | coffee (13) / **vanilla** (30)     | _none_                            | **coffee** (33) / strawberry (10)     |
+| strawberry (21) / **chocolate** (22) | strawberry (15) / **vanilla** (28) | strawberry (10) / **coffee** (33) | _none_                                |
 
 Notice that chocolate beats every other ice cream flavor in the elections? This makes it the Condorcet winner!
 
