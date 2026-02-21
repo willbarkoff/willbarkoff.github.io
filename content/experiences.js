@@ -1,0 +1,142 @@
+export const experiences = [
+  {
+    title: 'Cornell Rocketry Team',
+    subtitle: 'Team Lead',
+    style: 'bigfeature',
+    image: '/img/projects/rocketry.jpg',
+    skills: ['Leadership', 'C++'],
+    collaborators: [
+      {
+        name: 'Cornell Rocketry Team',
+        url: 'https://cornellrocketryteam.com'
+      }
+    ],
+    description:
+      "On the Cornell Rocketry Team, I lead a co-team of 58 engineers to design and build a high powered rocket to compete in the Spaceport America Cup, the worlds largest intercollegiate rocket engineering competition. Previously, I was the software lead, running a team of 7 software engineers developing low-level C and C++ for the rocket.",
+    links: [{ text: 'Website', url: 'https://cornellrocketryteam.com' }],
+    awards: [
+      '2nd Place, 2023 Spaceport America Cup',
+      '1st Place, 10k SRAD Division, 2023 Spaceport America Cup'
+    ]
+  },
+  {
+    title: 'Cornell Hillel',
+    subtitle: 'President',
+    style: 'feature',
+    skills: ['Leadership'],
+    collaborators: [
+      {
+        name: 'Cornell Hillel Student Executive Board',
+        url: 'https://hillel.cornell.edu'
+      }
+    ],
+    description:
+      "As president of Cornell Hillel, I serve on the Cornell Hillel board of trustees and Student Executive Board. On the student executive board, we organize large scale events for Cornell's ~3000 Jewish students."
+  },
+  {
+    title: 'Samsung Electronics America',
+    subtitle: 'Software Engineering Intern',
+    style: 'feature',
+    skills: ['TypeScript', 'React', 'C#'],
+    description:
+      "At Samsung, I worked on the New Concept Divison's Client Engineering team. I developed software for 2022 model year Samsung Smart TVs with C# and React.js. I worked on the front end related to Game Hub feature on 2022 model Smart TVs."
+  },
+  {
+    title: 'MyHomeworkSpace',
+    style: 'standard',
+    skills: ['Preact', 'React', 'React Native', 'Go'],
+    collaborators: [
+      {
+        name: 'MyHomeworkSpace Team',
+        url: 'http://myhomework.space/about.html'
+      }
+    ],
+    description:
+      'An online planner that lets you easily stay on top of your homework and tests. It synchronizes with the cloud, so you can access it anywhere you have an Internet connection.',
+    links: [
+      { text: 'Website', url: 'https://myhomework.space' },
+      { text: 'View Source', url: 'https://github.com/MyHomeworkSpace' }
+    ]
+  },
+  {
+    title: 'Donorfide',
+    style: 'standard',
+    skills: ['Go', 'React', 'TypeScript'],
+    collaborators: [
+      {
+        name: 'MyHomeworkSpace Team',
+        url: 'http://myhomework.space/about.html'
+      }
+    ],
+    description:
+      'A donation management software designed to be lightweight and powerful for small foundations.',
+    links: [
+      { text: 'Website', url: 'https://donorfide.org' },
+      { text: 'View Source', url: 'https://github.com/willbarkoff/donorfide' }
+    ]
+  },
+  {
+    title: 'Pulse Wearables',
+    style: 'standard',
+    skills: ['Node.js', 'TypeScript', 'React', 'Python', 'C#'],
+    collaborators: [{ name: 'Richa Krishna and Anna Pertl' }],
+    description:
+      'A wearable patch designed for people with heart conditions to help them monitor their physical activity.'
+  },
+  {
+    title: 'Charlie Chatbot (MSKCC)',
+    style: 'standard',
+    skills: ['Node.js', 'TypeScript', 'React', 'Python', 'C#'],
+    awards: ['Memorial Sloan Kettering DHI Summer Innovation Fellowship'],
+    collaborators: [
+      {
+        name: 'Memorial Sloan Kettering Cancer Center',
+        url: 'https://mskcc.org'
+      }
+    ],
+    description:
+      'A chatbot to improve communication between departments at Memorial Sloan Kettering Cancer Center.',
+    links: [
+      {
+        text: 'Impact presentation',
+        url: 'https://1drv.ms/p/s!Ai88DA_vvTiykjoqt2VzFcqRJRE1?e=M68sFE'
+      }
+    ]
+  },
+  {
+    title: 'Honor With Code',
+    style: 'standard',
+    skills: [],
+    awards: ['Memorial Sloan Kettering DHI Summer Innovation Fellowship'],
+    collaborators: [
+      { name: 'Wounded Warrior Project', url: 'https://mskcc.org' },
+      {
+        name: 'Pluralsight (formerly Code School)',
+        url: 'https://www.pluralsight.com/codeschool'
+      },
+      { name: 'Whiskey Bravo', url: 'https://whiskeybravo.org' }
+    ],
+    description:
+      'A program to donate Code School scholarships to injured veterans to help provide career training.',
+    links: [{ text: 'Website', url: 'https://honorwithcode.org/' }]
+  },
+  {
+    title: 'MyTiger',
+    style: 'standard',
+    skills: ['Node.js', 'React Native'],
+    collaborators: [
+      {
+        name: 'Dalton School Student Government Technology Committee',
+        url: 'http://blogs.dalton.org/gov'
+      }
+    ],
+    description:
+      'A chatbot availible through text and Google Assistant to answer questions about your school day.',
+    links: [
+      {
+        text: 'View source',
+        url: 'A chatbot availible through text and Google Assistant to answer questions about your school day.'
+      }
+    ]
+  }
+];
