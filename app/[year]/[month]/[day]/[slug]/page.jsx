@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { PostPage } from '@/app/_components/LayoutSections';
 import { formatDateLongUS } from '@/lib/date';
+import { renderMarkdownToReact } from '@/lib/markdown';
 import { getAllPostParams, getPostByParams } from '@/lib/posts';
 
 export async function generateStaticParams() {
@@ -25,6 +26,7 @@ export default async function PostPermalinkPage({ params }) {
   if (!post) {
     notFound();
   }
+  const content = await renderMarkdownToReact(post.body);
 
   return (
     <PostPage
@@ -48,7 +50,7 @@ export default async function PostPermalinkPage({ params }) {
         </section>
       }
     >
-      <article className="content" dangerouslySetInnerHTML={{ __html: post.html }} />
+      <article className="content">{content}</article>
     </PostPage>
   );
 }

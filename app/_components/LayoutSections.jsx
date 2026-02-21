@@ -1,18 +1,18 @@
 import { Footer } from './Footer';
 import { Nav } from './Nav';
 
-export function StandardPage({ currentPath, title, subtitle, children, narrow = false }) {
+export function StandardPage({ currentPath, title, subtitle, children }) {
   return (
     <>
       <Nav currentPath={currentPath} />
       <section className="page-hero">
-        <div className={`container ${narrow ? 'narrow' : ''}`}>
+        <div className="container">
           <h1>{title}</h1>
           {subtitle ? <p>{subtitle}</p> : null}
         </div>
       </section>
       <main className="section">
-        <div className={`container ${narrow ? 'narrow' : ''}`}>{children}</div>
+        <div className="container">{children}</div>
       </main>
       <Footer />
     </>
@@ -24,7 +24,7 @@ export function PostPage({ title, dateText, children, footer }) {
     <>
       <Nav />
       <section className="page-hero">
-        <div className="container narrow">
+        <div className="container">
           <h1>{title}</h1>
           <p>{dateText}</p>
         </div>
