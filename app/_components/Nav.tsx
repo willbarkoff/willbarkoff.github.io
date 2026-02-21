@@ -1,7 +1,12 @@
 import Link from 'next/link';
 import { navLinks, socialLinks } from '@/lib/site-data';
 
-export function Nav({ currentPath = '/', transparent = false }) {
+interface NavProps {
+  currentPath?: string;
+  transparent?: boolean;
+}
+
+export function Nav({ currentPath = '/', transparent = false }: NavProps) {
   const className = `site-nav ${transparent ? 'transparent' : ''}`;
 
   return (

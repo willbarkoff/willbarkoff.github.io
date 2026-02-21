@@ -1,12 +1,14 @@
+import type { Metadata } from 'next';
 import { StandardPage } from '@/app/_components/LayoutSections';
 import { getMarkdownPage } from '@/lib/pages';
+import type { PageFrontmatter } from '@/lib/types';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'PGP Key'
 };
 
 export default async function KeyHtmlPage() {
-  const page = await getMarkdownPage('key.md');
+  const page = await getMarkdownPage<PageFrontmatter>('key.md');
 
   return (
     <StandardPage

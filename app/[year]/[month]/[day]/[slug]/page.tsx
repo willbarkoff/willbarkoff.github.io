@@ -1,14 +1,20 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { PostPage } from '@/app/_components/LayoutSections';
 import { formatDateLongUS } from '@/lib/date';
 import { renderMarkdownToReact } from '@/lib/markdown';
 import { getAllPostParams, getPostByParams } from '@/lib/posts';
+import type { PostParams } from '@/lib/types';
 
-export async function generateStaticParams() {
+interface RouteProps {
+  params: Promise<PostParams>;
+}
+
+export async function generateStaticParams(): Promise<PostParams[]> {
   return getAllPostParams();
 }
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params }: RouteProps): Promise<Metadata> {
   const resolved = await params;
   const post = await getPostByParams(resolved);
   if (!post) {
@@ -20,7 +26,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function PostPermalinkPage({ params }) {
+export default async function PostPermalinkPage({ params }: RouteProps) {
   const resolved = await params;
   const post = await getPostByParams(resolved);
   if (!post) {

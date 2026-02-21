@@ -1,9 +1,11 @@
+import type { Metadata } from 'next';
 import { StandardPage } from '@/app/_components/LayoutSections';
 import { getRawPage } from '@/lib/pages';
+import type { PageFrontmatter } from '@/lib/types';
 
-const page = getRawPage('contact.html');
+const page = getRawPage<PageFrontmatter>('contact.html');
 
-export const metadata = {
+export const metadata: Metadata = {
   title: page.data.title
 };
 

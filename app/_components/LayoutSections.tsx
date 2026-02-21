@@ -1,7 +1,15 @@
+import type { ReactNode } from 'react';
 import { Footer } from './Footer';
 import { Nav } from './Nav';
 
-export function StandardPage({ currentPath, title, subtitle, children }) {
+interface StandardPageProps {
+  currentPath: string;
+  title: string;
+  subtitle?: string | undefined;
+  children: ReactNode;
+}
+
+export function StandardPage({ currentPath, title, subtitle, children }: StandardPageProps) {
   return (
     <>
       <Nav currentPath={currentPath} />
@@ -19,7 +27,14 @@ export function StandardPage({ currentPath, title, subtitle, children }) {
   );
 }
 
-export function PostPage({ title, dateText, children, footer }) {
+interface PostPageProps {
+  title: string;
+  dateText: string;
+  children: ReactNode;
+  footer: ReactNode;
+}
+
+export function PostPage({ title, dateText, children, footer }: PostPageProps) {
   return (
     <>
       <Nav />
@@ -38,7 +53,12 @@ export function PostPage({ title, dateText, children, footer }) {
   );
 }
 
-export function BigPage({ title, subtitle }) {
+interface BigPageProps {
+  title: string;
+  subtitle: string;
+}
+
+export function BigPage({ title, subtitle }: BigPageProps) {
   return (
     <>
       <Nav transparent currentPath="/404" />

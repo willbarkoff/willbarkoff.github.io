@@ -1,9 +1,10 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { StandardPage } from '@/app/_components/LayoutSections';
-import { getAllPosts } from '@/lib/posts';
 import { formatDateLongUS } from '@/lib/date';
+import { getAllPosts } from '@/lib/posts';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Posts'
 };
 

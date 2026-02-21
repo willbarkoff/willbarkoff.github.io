@@ -11,9 +11,9 @@ const MONTHS = [
   'October',
   'November',
   'December'
-];
+] as const;
 
-export function ordinal(n) {
+export function ordinal(n: number): string {
   const mod10 = n % 10;
   const mod100 = n % 100;
   if (mod10 === 1 && mod100 !== 11) return `${n}st`;
@@ -22,6 +22,7 @@ export function ordinal(n) {
   return `${n}th`;
 }
 
-export function formatDateLongUS(date) {
-  return `${MONTHS[date.getUTCMonth()]} ${ordinal(date.getUTCDate())}, ${date.getUTCFullYear()}`;
+export function formatDateLongUS(date: Date): string {
+  const monthName = MONTHS[date.getUTCMonth()];
+  return `${monthName} ${ordinal(date.getUTCDate())}, ${date.getUTCFullYear()}`;
 }

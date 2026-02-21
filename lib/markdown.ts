@@ -8,9 +8,10 @@ import rehypeRaw from 'rehype-raw';
 import rehypeKatex from 'rehype-katex';
 import rehypeStringify from 'rehype-stringify';
 import { Fragment, jsx, jsxs } from 'react/jsx-runtime';
-import { PostImage } from './markdown-includes.jsx';
+import type { ReactNode } from 'react';
+import { PostImage } from './markdown-includes';
 
-function escapeHtmlAttr(value) {
+function escapeHtmlAttr(value: string): string {
   return String(value)
     .replaceAll('&', '&amp;')
     .replaceAll('"', '&quot;')
@@ -19,41 +20,50 @@ function escapeHtmlAttr(value) {
     .replaceAll('\n', ' ');
 }
 
-export function preprocessJekyllIncludes(input) {
-  return input.replace(/{%\s*include\s+post-image\.html([\s\S]*?)%}/g, (_full, attrsBlock) => {
-    const attrs = {};
+export function preprocessJekyllIncludes(input: string): string {
+  return input.replace(/{%\s*include\s+post-image\.html([\s\S]*?)%}/g, (_full, attrsBlock: string) => {
+    const attrs: Record<string, string> = {};
     const regex = /(\w+)="([^"]*)"/g;
     for (const match of attrsBlock.matchAll(regex)) {
-      attrs[match[1]] = match[2];
+      const [, key, value] = match;
+      if (!key || value === undefined) {
+        continue;
+      }
+      attrs[key] = value;
     }
 
     const side = attrs.side ? ` side="${escapeHtmlAttr(attrs.side)}"` : '';
     const maxWidth = attrs.max_width ? ` maxwidth="${escapeHtmlAttr(attrs.max_width)}"` : '';
     const url = attrs.url ? ` url="${escapeHtmlAttr(attrs.url)}"` : '';
     const caption = attrs.caption ? ` caption="${escapeHtmlAttr(attrs.caption)}"` : '';
-    const attribution = attrs.attribution
-      ? ` attribution="${escapeHtmlAttr(attrs.attribution)}"`
-      : '';
+    const attribution = attrs.attribution ? ` attribution="${escapeHtmlAttr(attrs.attribution)}"` : '';
 
     return `\n\n<post-image${side}${maxWidth}${url}${caption}${attribution}></post-image>\n\n`;
   });
 }
 
-function rehypeUnwrapPostImageParagraphs() {
-  return (tree) => {
-    function visit(node) {
-      if (!node || !node.children || !Array.isArray(node.children)) return;
+interface TreeNode {
+  type?: string;
+  tagName?: string;
+  value?: string;
+  children?: TreeNode[];
+}
 
-      const nextChildren = [];
+function rehypeUnwrapPostImageParagraphs() {
+  return (tree: TreeNode): void => {
+    function visit(node: TreeNode): void {
+      if (!node.children || !Array.isArray(node.children)) return;
+
+      const nextChildren: TreeNode[] = [];
       for (const child of node.children) {
-        if (child && child.type === 'element' && child.tagName === 'p' && Array.isArray(child.children)) {
+        if (child.type === 'element' && child.tagName === 'p' && Array.isArray(child.children)) {
           const meaningfulChildren = child.children.filter(
-            (x) => !(x.type === 'text' && !x.value.trim())
+            (x) => !(x.type === 'text' && typeof x.value === 'string' && !x.value.trim())
           );
           if (
             meaningfulChildren.length === 1 &&
-            meaningfulChildren[0].type === 'element' &&
-            meaningfulChildren[0].tagName === 'post-image'
+            meaningfulChildren[0]?.type === 'element' &&
+            meaningfulChildren[0]?.tagName === 'post-image'
           ) {
             nextChildren.push(meaningfulChildren[0]);
             continue;
@@ -70,7 +80,7 @@ function rehypeUnwrapPostImageParagraphs() {
   };
 }
 
-export async function renderMarkdownToHtml(markdown) {
+export async function renderMarkdownToHtml(markdown: string): Promise<string> {
   const processed = preprocessJekyllIncludes(markdown);
   const file = await unified()
     .use(remarkParse)
@@ -85,7 +95,7 @@ export async function renderMarkdownToHtml(markdown) {
   return String(file);
 }
 
-export async function renderMarkdownToReact(markdown) {
+export async function renderMarkdownToReact(markdown: string): Promise<ReactNode> {
   const processed = preprocessJekyllIncludes(markdown);
   const file = await unified()
     .use(remarkParse)
@@ -105,10 +115,10 @@ export async function renderMarkdownToReact(markdown) {
     })
     .process(processed);
 
-  return file.result;
+  return file.result as ReactNode;
 }
 
-export function countWords(text) {
+export function countWords(text: string): number {
   return text
     .replace(/```[\s\S]*?```/g, ' ')
     .replace(/`[^`]*`/g, ' ')

@@ -1,12 +1,17 @@
 import Link from 'next/link';
-import { Nav } from './_components/Nav';
 import { Footer } from './_components/Footer';
+import { Nav } from './_components/Nav';
 import { experiences } from '@/content/experiences';
 import { renderMarkdownToReact } from '@/lib/markdown';
 import { getRecentPosts } from '@/lib/posts';
 import { site } from '@/lib/site-data';
+import type { Experience } from '@/lib/types';
 
-function ExperienceCard({ experience }) {
+interface ExperienceCardProps {
+  experience: Experience;
+}
+
+function ExperienceCard({ experience }: ExperienceCardProps) {
   return (
     <article className={`experience-card ${experience.style}`}>
       {experience.image ? (
@@ -32,7 +37,7 @@ function ExperienceCard({ experience }) {
           </p>
         ))}
 
-        {experience.skills?.length ? (
+        {experience.skills.length ? (
           <p className="skills">
             {experience.skills.map((skill) => (
               <span key={`${experience.title}-${skill}`}>{skill}</span>

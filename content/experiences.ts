@@ -1,4 +1,6 @@
-export const experiences = [
+import type { Experience } from '@/lib/types';
+
+export const experiences: Experience[] = [
   {
     title: 'Cornell Rocketry Team',
     subtitle: 'Team Lead',

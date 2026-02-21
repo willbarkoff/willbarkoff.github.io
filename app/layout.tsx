@@ -1,19 +1,25 @@
+import type { Metadata, Viewport } from 'next';
+import type { ReactNode } from 'react';
 import './globals.css';
 import { site } from '@/lib/site-data';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: site.title,
     template: `%s | ${site.title}`
   },
-  description: site.tagline,
+  description: site.tagline
 };
 
-export const viewport = {
+export const viewport: Viewport = {
   themeColor: site.accent
+};
+
+interface RootLayoutProps {
+  children: ReactNode;
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <head>

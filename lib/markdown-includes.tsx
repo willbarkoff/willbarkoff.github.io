@@ -1,15 +1,19 @@
-import { Fragment } from 'react';
+import { Fragment, type ReactNode } from 'react';
 
-function renderInlineMarkdownLinks(text) {
+function renderInlineMarkdownLinks(text: string): ReactNode {
   if (!text) return null;
 
-  const out = [];
+  const out: ReactNode[] = [];
   const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
   let lastIndex = 0;
   let key = 0;
 
   for (const match of text.matchAll(regex)) {
     const [full, label, href] = match;
+    if (!full || !label || !href) {
+      continue;
+    }
+
     const start = match.index ?? 0;
     if (start > lastIndex) {
       out.push(text.slice(lastIndex, start));
@@ -28,10 +32,18 @@ function renderInlineMarkdownLinks(text) {
   }
 
   if (out.length === 1) {
-    return out[0];
+    return out[0] ?? null;
   }
 
   return <Fragment>{out}</Fragment>;
+}
+
+interface PostImageProps {
+  side?: string;
+  maxwidth?: string;
+  url?: string;
+  caption?: string;
+  attribution?: string;
 }
 
 export function PostImage({
@@ -40,7 +52,7 @@ export function PostImage({
   url = '',
   caption = '',
   attribution = ''
-}) {
+}: PostImageProps) {
   const resolvedMaxWidth = maxwidth;
 
   return (

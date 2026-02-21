@@ -1,16 +1,17 @@
-export const site = {
+import type { FooterLink, NavLink, SiteMeta, SocialLink } from './types';
+
+export const site: SiteMeta = {
   title: 'Will Barkoff',
-  tagline:
-    "I'm Will Barkoff, a software engineer in New York City.",
+  tagline: "I'm Will Barkoff, a software engineer in New York City.",
   accent: '#123456'
 };
 
-export const navLinks = [
+export const navLinks: NavLink[] = [
   { title: 'Home', url: '/' },
   { title: 'Posts', url: '/posts.html' }
 ];
 
-export const socialLinks = [
+export const socialLinks: SocialLink[] = [
   {
     icon: 'fas fa-envelope',
     url: 'mailto:william@barkoffusa.com',
@@ -38,12 +39,12 @@ export const socialLinks = [
   }
 ];
 
-export const footerProjects = [
+export const footerProjects: FooterLink[] = [
   { name: 'MyHomeworkSpace', url: 'https://myhomework.space' },
   { name: 'Honor with Code', url: 'https://honorwithcode.org' }
 ];
 
-export const footerResources = [
+export const footerResources: FooterLink[] = [
   {
     name: 'Website Source Code',
     url: 'https://github.com/willbarkoff/willbarkoff.github.io'
