@@ -97,7 +97,7 @@ export default async function HomePage() {
         </div>
       </header>
 
-      <main>
+      <main className="home-main">
         <section className="section container">
           <h2>What I&apos;ve written recently</h2>
           <div className="post-grid">
