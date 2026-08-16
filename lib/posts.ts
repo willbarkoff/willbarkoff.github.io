@@ -57,6 +57,7 @@ function readPostFile(filename: string): PostRecord {
     tags: toStringArray(frontmatter.tags),
     body: parsed.content,
     excerptSource,
+    blurb: typeof frontmatter.blurb === 'string' ? frontmatter.blurb : '',
     wordCount,
     readMinutes: Math.max(1, Math.floor(wordCount / 400))
   };

@@ -1,5 +1,6 @@
 ---
 title: "HackDalton: Running a CTF" 
+blurb: "An inside look at organizing HackDalton, a beginner-friendly high school CTF—from problem design and sponsorships to keeping the competition running."
 author: William Barkoff
 tags: ["HackDalton", "CTF", "competition"]
 layout: post

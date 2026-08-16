@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { Footer } from './_components/Footer';
 import { Nav } from './_components/Nav';
 import { experiences } from '@/content/experiences';
-import { renderMarkdownToReact } from '@/lib/markdown';
 import { getRecentPosts } from '@/lib/posts';
 import { site } from '@/lib/site-data';
 import type { Experience } from '@/lib/types';
@@ -63,12 +62,6 @@ function ExperienceCard({ experience }: ExperienceCardProps) {
 
 export default async function HomePage() {
   const posts = await getRecentPosts(3);
-  const postsWithExcerptContent = await Promise.all(
-    posts.map(async (post) => ({
-      ...post,
-      excerptContent: await renderMarkdownToReact(post.excerptSource)
-    }))
-  );
 
   return (
     <>
@@ -108,12 +101,12 @@ export default async function HomePage() {
         <section className="section container">
           <h2>What I&apos;ve written recently</h2>
           <div className="post-grid">
-            {postsWithExcerptContent.map((post) => (
+            {posts.map((post) => (
               <article key={post.url} className="post-card">
                 <h3>
                   <Link href={post.url}>{post.title}</Link>
                 </h3>
-                <div>{post.excerptContent}</div>
+                <p>{post.blurb}</p>
               </article>
             ))}
           </div>

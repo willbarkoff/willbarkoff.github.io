@@ -7,6 +7,7 @@ export interface PostParams {
 
 export interface PostFrontmatter {
   title: string;
+  blurb: string;
   author?: string;
   tags?: string[];
   excerpt_separator?: string;
@@ -22,6 +23,7 @@ export interface PostRecord extends PostParams {
   tags: string[];
   body: string;
   excerptSource: string;
+  blurb: string;
   wordCount: number;
   readMinutes: number;
 }

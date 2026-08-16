@@ -1,5 +1,6 @@
 ---
 title: Let's talk about Ranked Choice voting
+blurb: "A plain-language tour of plurality, instant-runoff, and Condorcet voting—and why the method used to count preferences matters."
 author: William Barkoff
 tags: ["math", "theory", "elections", "new york city"]
 layout: post
