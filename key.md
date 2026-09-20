@@ -11,67 +11,10 @@ My email ([william@barkoffusa.com](mailto:william@barkoffusa.com)) supports the 
 gpg --locate-keys william@barkoffusa.com
 ```
 
-If that doesn't work (it only works in newer versions of `gpg`), you should be able to get my key by it's ID, `0xCBE2057A7F99F119`.
+If that doesn't work (it only works in newer versions of `gpg`), you should be able to get my key by it's fingerprint, `5F04BC734C64CB0F8CCF4F437015D84BE9E1BC08`.
 
 ```shell
-gpg --recv-keys 0xCBE2057A7F99F119
+gpg --recv-keys 5F04BC734C64CB0F8CCF4F437015D84BE9E1BC08
 ```
 
-If something goes wrong with that, you can download my key from the [OpenPGP Keyserver](https://keys.openpgp.org/search?q=william@barkoffusa.com), or copy it from below.
-
-
-
-```pgp
------BEGIN PGP PUBLIC KEY BLOCK-----
-
-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
-pKgrrK8+SPd+Gn4sG8blBg==
-=W5ry
------END PGP PUBLIC KEY BLOCK-----
-```
+If something goes wrong with that, you can download my key from the [OpenPGP Keyserver](https://keys.openpgp.org/search?q=william@barkoffusa.com).
